@@ -1,0 +1,29 @@
+body.dark-mode {
+    background-color: #1a202c; 
+    color: #f7fafc;
+}
+
+body.dark-mode section {
+    background-color: #2d3748;
+}
+
+body.dark-mode nav {
+    background-color: #1a202c;
+    border-color: #4a5568;
+}
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: #3725d4;
+  z-index: 100;
+}
+
+nav a.active {
+    color: #2563eb;
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 4px;
+    transition: 0.3s;
+}
