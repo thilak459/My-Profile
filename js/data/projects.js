@@ -1,45 +1,44 @@
 const projectsData = [
   {
     id: 1,
-    name: "Movie Time",
-    category: "MERN",
+    name: "AI driven tourist recommendation system with chatBot",
+    category: "AI-ML",
     description:
-      "Full stack movie ticket booking application with AI-powered smart movie suggestions.",
-    technologies: ["ReactJS", "ExpressJS", "MongoDB"],
+      " Built an AI-based tourist recommendation system for personalized travel suggestions . Integrated a chatbot for real-time user interaction and trip planning.",
+    technologies: ["Python", "JSON", "JavaScript","HTML/CSS"],
     status: "Live",
     liveDemo: "#",
     github: "#"
   },
   {
     id: 2,
-    name: "Gola",
-    category: "MERN",
+    name: "News Virality Prediction",
+    category: "ML",
     description:
-      "Cab booking platform that helps users quickly book rides for daily travel.",
-    technologies: ["ReactJS", "ExpressJS", "MongoDB"],
+      "Content Attributes: Headline strength, readability, sentiment, and topic. Social Signals: Early shares, likes, comments, and the influence of initial sharers.",
+    technologies: ["Machine learning", "Python", "Excel"],
     status: "Live",
     liveDemo: "#",
     github: "#"
   },
   {
     id: 3,
-    name: "Portfolio Website",
-    category: "Frontend",
-    description:
-      "Responsive personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "Tailwind CSS", "JavaScript"],
+    name: "Crime Management System",
+    category: "Web application",
+    description:"Easy to store records of criminal data in the website, to overcome the usage of traditional storing manually. Tracks investigations with features like assignment, progress tracking and evidence management.",
+    technologies: ["SQL", "PHP","CSS", "JavaScript"],
     status: "Live",
     liveDemo: "#",
     github: "#"
   },
   {
     id: 4,
-    name: "Developer Stats Dashboard",
-    category: "JavaScript",
+    name: "Secured Voting app",
+    category: "Android app",
     description:
-      "Dynamic dashboard that loads developer statistics and profile insights using Fetch API.",
-    technologies: ["JavaScript", "Fetch API", "JSON"],
-    status: "Demo",
+      "A secured voting app is a digital platform designed to facilitate safe, transparent, and tamper-proof elections using advanced security measures.",
+    technologies: ["Android", "Java", "SQL"],
+    status: "Live",
     liveDemo: "#",
     github: "#"
   }

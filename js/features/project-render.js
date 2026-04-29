@@ -5,73 +5,105 @@ function renderProject(dataToRender = projectsData) {
         console.log("Projects not found");
         return;
     }
-    projectContainer.innerHTML = "";
-    dataToRender.forEach(function (project) {
-        const card = document.createElement("div");
-        card.className = "hover:bg-green-100 shadow-lg hover:shadow-2xl rounded-3xl p-8 transition-all duration-500 hover:-translate-y-3 overflow-hidden border ";
 
+    projectContainer.innerHTML = "";
+
+    dataToRender.forEach(function (project) {
+
+        // ===== CARD =====
+        const card = document.createElement("div");
+        card.className =
+            "bg-gray-50 rounded-2xl shadow-md p-6 cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-gray-200 hover:bg-white";
+
+        // ===== LIKE BUTTON =====
+        const likeBtn = document.createElement("button");
+        likeBtn.className = "flex items-center gap-1 text-gray-400 hover:text-red-500 mb-2 transition";
+
+        const heart = document.createElement("span");
+        heart.textContent = "❤️";
+
+        const countSpan = document.createElement("span");
+        countSpan.textContent = "0";
+
+        likeBtn.appendChild(heart);
+        likeBtn.appendChild(countSpan);
+
+        // ===== PROJECT NAME =====
         const projectName = document.createElement("h3");
-        projectName.className = "text-2xl font-bold group-hover: text-slate-600 flex justify-center";
+        projectName.className = "text-xl font-semibold text-center text-gray-800";
         projectName.textContent = project.name;
 
+        // ===== CATEGORY =====
         const projectCategory = document.createElement("p");
-        projectCategory.className = "text-lg font-semibold flex justify-center";
+        projectCategory.className = "text-xs text-center text-blue-600 font-medium mb-2";
         projectCategory.textContent = project.category;
 
-        const projectDescription = document.createElement("p");
-        projectDescription.classList = "text-sm ";
-        projectDescription.textContent = project.description;
-
+        // ===== TECHNOLOGIES =====
         const projectTechnologies = document.createElement("p");
-        projectTechnologies.classList = "text-sm font-semibold";
+        projectTechnologies.className = "text-xs text-center text-gray-500 mb-2";
         projectTechnologies.textContent = project.technologies;
 
-        const projectStatus = document.createElement("span");
-        projectStatus.classList = "text-xs font-bold text-red-600 uppercase";
-        projectStatus.textContent = project.status;
+        // ===== DESCRIPTION (HIDDEN INITIALLY) =====
+        const projectDescription = document.createElement("p");
+        projectDescription.className =
+            "text-sm text-gray-600 mt-3 max-h-0 overflow-hidden transition-all duration-500";
+        projectDescription.textContent = project.description;
 
+        // ===== BUTTONS =====
         const btnContainer = document.createElement("div");
-        btnContainer.classList = "flex mb-3 gap-4 pt-6";
+        btnContainer.className = "flex justify-center gap-4 mt-4";
 
-        const projectDemo = document.createElement("div");
-        projectDemo.classList = "bg-gray-700 hover:bg-black text-white hover:shadow-lg rounded transition-all duration-300 px-8 py-3";
+        const projectDemo = document.createElement("a");
+        projectDemo.href = project.demo || "#";
+        projectDemo.target = "_blank";
+        projectDemo.className =
+            "bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm transition";
         projectDemo.textContent = "Live Demo";
 
-        const projectGit = document.createElement("div");
-        projectGit.classList = "bg-gray-700 hover:bg-black text-white hover:shadow-lg rounded transition-all duration-300 px-8 py-3";
-        projectGit.textContent = "Github";
+        const projectGit = document.createElement("a");
+        projectGit.href = project.github || "#";
+        projectGit.target = "_blank";
+        projectGit.className =
+            "border border-gray-300 hover:bg-gray-100 text-gray-700 px-4 py-2 rounded-md text-sm transition";
+        projectGit.textContent = "GitHub";
 
-        const likeBtn = document.createElement("button");
-        likeBtn.classList = "flex"
-        likeBtn.textContent = "❤️"
-
-        const span = document.createElement("span");
-        span.textContent = "0"
-
-        card.appendChild(projectStatus);
-        card.appendChild(likeBtn);
-        likeBtn.appendChild(span);
-        card.appendChild(projectName);
-        card.appendChild(projectCategory);
-        card.appendChild(projectDescription);
-        card.appendChild(projectTechnologies);
-
-        card.appendChild(btnContainer);
         btnContainer.appendChild(projectDemo);
         btnContainer.appendChild(projectGit);
 
+        // ===== APPEND ELEMENTS =====
+        card.appendChild(likeBtn);
+        card.appendChild(projectName);
+        card.appendChild(projectCategory);
+        card.appendChild(projectTechnologies);
+        card.appendChild(projectDescription);
+        card.appendChild(btnContainer);
+
         projectContainer.appendChild(card);
 
-        likeBtn.addEventListener("click", function () {
-
-            const count = parseInt(span.textContent);
-            if (count < 1) {
-                span.textContent = count + 1;
-            }
-            else {
-                alert("You already liked that project");
+        // ===== CLICK TO TOGGLE DESCRIPTION =====
+        card.addEventListener("click", function () {
+            if (projectDescription.style.maxHeight) {
+                projectDescription.style.maxHeight = null;
+            } else {
+                projectDescription.style.maxHeight =
+                    projectDescription.scrollHeight + "px";
             }
         });
+
+        // ===== LIKE BUTTON LOGIC =====
+        likeBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+
+            const count = parseInt(countSpan.textContent);
+
+            if (count < 1) {
+                countSpan.textContent = count + 1;
+            } else {
+                alert("You already liked this project");
+            }
+        });
+
     });
 
+    console.log("Projects rendered successfully");
 }

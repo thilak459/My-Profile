@@ -13,15 +13,15 @@ function renderSkills(dataToRender = skillsData) {
 
         //create icon
         const iconBox = document.createElement("div");
-        iconBox.className = "w-20 h-20 mx-auto mb-4 bg-green-900 rounded-2xl flex items-center justify-center";
+        iconBox.className = "w-20 h-20 mx-auto mb-4 bg-white rounded-2xl flex items-center justify-center shadow";
 
         //create icon text
-        const iconText = document.createElement("span");
-        iconText.className = "text-2xl text-white font-bold";
-        iconText.textContent = skill.shortLabel;
+        const iconImg = document.createElement("img");
+        iconImg.src = skill.image;
+        iconImg.alt = skill.name;
+        iconImg.className = "w-12 h-12 object-contain transition-transform duration-300 hover:scale-110";
 
-        //put icon text inside icon box
-        iconBox.appendChild(iconText);
+        iconBox.appendChild(iconImg);
 
         //create skill name
         const skillName = document.createElement("h3");
@@ -42,4 +42,4 @@ function renderSkills(dataToRender = skillsData) {
         skillsContainer.appendChild(card);
     });
     console.log("Skills rendered successfully");
-}
+}   
