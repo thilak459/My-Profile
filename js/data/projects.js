@@ -41,5 +41,16 @@ const projectsData = [
     status: "Live",
     liveDemo: "#",
     github: "#"
+  },
+  {
+    id: 5,
+    name: "Portfolio website",
+    category: "Web application",
+    description:
+      "A portfolio website is a curated digital space that showcases your best work, professional skills, and creative identity in one centralized platform.",
+    technologies: ["HTML", "CSS","TailwindCSS", "JavaScript"],
+    status: "Live",
+    liveDemo: "#",
+    github: "#"
   }
 ];

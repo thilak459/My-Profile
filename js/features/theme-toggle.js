@@ -19,3 +19,16 @@ function initThemeToggle(){
         }
     });
 }
+const toggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  
+  // Swap the icon character
+  if (document.body.classList.contains('dark')) {
+    themeIcon.textContent = '🌙';
+  } else {
+    themeIcon.textContent = '☀️';
+  }
+});

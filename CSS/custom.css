@@ -317,7 +317,7 @@ body.dark-mode #projects {
 
 /* ===== FIX PROJECT CARDS ===== */
 body.dark-mode #projects-container > div {
-  background-color: #1e293b !important;
+  background-color: #e9a5fcdb !important;
   border: 1px solid #334155;
 }
 
@@ -342,4 +342,34 @@ body.dark-mode #projects-container .text-blue-500 {
 /* ===== SMOOTH TRANSITION ===== */
 body, section {
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+#theme-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Optional: change background when dark mode is active */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* ===== SKILLS DARK MODE ===== */
+
+/* card */
+body.dark-mode #skills-container > div {
+  background-color: #f5f7f9 !important;  /* light card */
+  border: 1px solid #334155;
+}
+
+/* title (BLACK ✔) */
+body.dark-mode #skills-container h3 {
+  color: #000000 !important;
+}
+
+/* description */
+body.dark-mode #skills-container p {
+  color: #1f2937 !important;
 }

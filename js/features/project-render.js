@@ -13,7 +13,7 @@ function renderProject(dataToRender = projectsData) {
         // ===== CARD =====
         const card = document.createElement("div");
         card.className =
-            "bg-gray-50 rounded-2xl shadow-md p-6 cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-gray-200 hover:bg-white";
+            "bg-blue-100 rounded-2xl shadow-md p-6 cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-gray-200 hover:bg-white";
 
         // ===== LIKE BUTTON =====
         const likeBtn = document.createElement("button");
@@ -64,7 +64,7 @@ function renderProject(dataToRender = projectsData) {
         projectGit.href = project.github || "#";
         projectGit.target = "_blank";
         projectGit.className =
-            "border border-gray-300 hover:bg-gray-100 text-gray-700 px-4 py-2 rounded-md text-sm transition";
+            "border bg-blue-300 border-gray-300 hover:bg-gray-100 text-gray-700 px-4 py-2 rounded-md text-sm transition";
         projectGit.textContent = "GitHub";
 
         btnContainer.appendChild(projectDemo);

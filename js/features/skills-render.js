@@ -25,7 +25,7 @@ function renderSkills(dataToRender = skillsData) {
 
         //create skill name
         const skillName = document.createElement("h3");
-        skillName.className = "text-xl font-bold mb-2";
+        skillName.className = "text-xl font-bold mb-2 text-gray-800";
         skillName.textContent = skill.name;
 
         //create skill description 
