@@ -13,7 +13,7 @@ function renderProject(dataToRender = projectsData) {
         // ===== CARD =====
         const card = document.createElement("div");
         card.className =
-            "bg-blue-100 rounded-2xl shadow-md p-6 cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-gray-200 hover:bg-white";
+            "bg-gradient-to-br from-slate-50 via-white to-indigo-50  rounded-2xl shadow-md p-6 cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-gray-200 hover:bg-white";
 
         // ===== LIKE BUTTON =====
         const likeBtn = document.createElement("button");

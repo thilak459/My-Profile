@@ -1,6 +1,19 @@
-#projects {
-  box-shadow: inset 0 10px 20px rgba(0,0,0,0.03);
+#section{
+background: linear-gradient(135deg, #eef2ff, #f5f3ff, #fdf2f8);
+  color: #1e293b;   /* dark readable text */
+  padding: 10px 20px;
+  border-radius: 8px;
 }
+#name {
+  background: linear-gradient(to right, #6366f1, #a855f7, #ec4899, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#projects {
+  box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.03);
+}
+
 /* NAV LINK STYLE */
 .nav-link {
   position: relative;
@@ -26,10 +39,13 @@
 .nav-link:hover::after {
   width: 100%;
 }
+
 /* ===== DARK MODE BASE ===== */
 body.dark-mode {
-  background-color: #0f172a;   /* deep navy */
-  color: #e2e8f0;              /* light text */
+  background-color: #0f172a;
+  /* deep navy */
+  color: #e2e8f0;
+  /* light text */
 }
 
 /* ===== SECTIONS ===== */
@@ -130,10 +146,12 @@ body.dark-mode .bg-black {
   background-color: #334155 !important;
   color: #e2e8f0;
 }
+
 body.dark-mode .social-icon:hover {
   background-color: #3b82f6 !important;
   color: white;
 }
+
 /* ===== GLOBAL THEME ===== */
 /* ===== HERO SECTION ===== */
 section:first-of-type {
@@ -146,15 +164,18 @@ section:first-of-type::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
   background-size: 30px 30px;
   opacity: 0.4;
   pointer-events: none;
 }
+
 /* FIX NAME VISIBILITY */
 body.dark-mode #name {
-  color: #181818 !important;  /* light text */
+  color: #181818 !important;
+  /* light text */
 }
+
 /* ===== HEADINGS ===== */
 h1 {
   color: #0f172a;
@@ -162,7 +183,8 @@ h1 {
 }
 
 h1 span {
-  color: #4f46e5; /* highlight name */
+  color: #4f46e5;
+  /* highlight name */
 }
 
 /* ===== SUBTEXT ===== */
@@ -171,14 +193,15 @@ h1 span {
 }
 
 /* ===== BUTTON ===== */
-#proj{
+#proj {
   background: linear-gradient(135deg, #6366f1, #4f46e5);
   color: white !important;
   border-radius: 999px;
   box-shadow: 0 10px 25px rgba(99, 102, 241, 0.25);
   transition: all 0.3s ease;
 }
-#resume{
+
+#resume {
   background: linear-gradient(135deg, #bd62d6, #4f46e5);
   color: white !important;
   border-radius: 999px;
@@ -190,7 +213,7 @@ h1 span {
 img {
   border-radius: 50%;
   border: 6px solid white;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
 
@@ -213,6 +236,7 @@ nav {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid #e5e7eb;
 }
+
 #theme-toggle {
   padding: 6px 12px;
   border-radius: 6px;
@@ -247,11 +271,13 @@ body.dark-mode #projects-container .text-gray-500 {
 body.dark-mode #projects-container .text-gray-600 {
   color: #e2e8f0 !important;
 }
+
 /* Project card background */
-body.dark-mode #projects-container > div {
+body.dark-mode #projects-container>div {
   background-color: #1e293b !important;
   border: 1px solid #334155;
 }
+
 body.dark-mode nav a.active {
   color: #60a5fa;
   border-bottom: 2px solid #60a5fa;
@@ -316,18 +342,18 @@ body.dark-mode #projects {
 }
 
 /* ===== FIX PROJECT CARDS ===== */
-body.dark-mode #projects-container > div {
-  background-color: #e9a5fcdb !important;
+body.dark-mode #projects-container>div {
+  background-color: #ebcbf4db !important;
   border: 1px solid #334155;
 }
 
 /* ===== FIX PROJECT TEXT ===== */
 body.dark-mode #projects-container h3 {
-  color: #f1f5f9 !important;
+  color: #141415 !important;
 }
 
 body.dark-mode #projects-container .text-gray-500 {
-  color: #cbd5e1 !important;
+  color: #606161 !important;
 }
 
 body.dark-mode #projects-container .text-gray-600 {
@@ -340,9 +366,11 @@ body.dark-mode #projects-container .text-blue-500 {
 }
 
 /* ===== SMOOTH TRANSITION ===== */
-body, section {
+body,
+section {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 #theme-btn {
   font-size: 2rem;
   background: none;
@@ -359,8 +387,9 @@ body.dark-mode {
 /* ===== SKILLS DARK MODE ===== */
 
 /* card */
-body.dark-mode #skills-container > div {
-  background-color: #f5f7f9 !important;  /* light card */
+body.dark-mode #skills-container>div {
+  background-color: #f5f7f9 !important;
+  /* light card */
   border: 1px solid #334155;
 }
 
