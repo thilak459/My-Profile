@@ -9,7 +9,7 @@ function renderSkills(dataToRender = skillsData) {
     dataToRender.forEach(function (skill) {
         //to create outer card
         const card = document.createElement("div");
-        card.className = "p-8 text-center bg-white rounded-3xl shadow-lg";
+        card.className = "p-8 text-center bg-white rounded-3xl shadow-lg hover:bg-gray-100";
 
         //create icon
         const iconBox = document.createElement("div");

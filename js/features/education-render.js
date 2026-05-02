@@ -6,7 +6,7 @@ function renderEducation(){
     educationContainer.innerHTML="";
     educationData.forEach(function(education){
         const card = document.createElement("div");
-        card.className = "flex gap-10 bg-blue-400 hover:bg-green-100 shadow-lg hover:shadow-2xl rounded-3xl p-8 transition-all duration-500 hover:-translate-y-3 overflow-hidden ";
+        card.className = "group relative overflow-hidden bg-gradient-to-br from-blue-500 via-sky-200 to-indigo-2 ,.m00 backdrop-blur-lg rounded-2xl p-6 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-white/30 hover:bg-gradient-to-br hover:from-indigo-100 hover:via-purple-100 hover:to-pink-100 ";
 
         const edBoard = document.createElement("div");
         edBoard.classList = "w-16 h-16 bg-emarald-600 rounded flex items-center justify-center shadow-2xl text-white font-bold"
