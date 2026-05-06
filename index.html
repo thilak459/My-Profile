@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
 </head>
 
@@ -32,7 +32,20 @@
                 <li><a href="#experience" class="nav-link">Education & Experience</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
             </ul>
+            <button id="menu-btn" class="md:hidden text-3xl">
+                ☰
+            </button>
+            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t">
 
+                <div class="flex flex-col items-center py-6 space-y-6 text-gray-700 font-medium">
+
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#experience" class="nav-link">Education & Experience</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+
+                </div>
+            </div>
             <!-- RIGHT SIDE -->
             <div class="flex items-center gap-4">
 
@@ -51,7 +64,8 @@
     <!-- HERO SECTION -->
 
     <section
-        class="min-h-screen flex flex-col lg:flex-row lg:items-center lg:justify-between px-8 lg:px-16 py-20 gap-12 lg:gap-20" id="section">
+        class="min-h-screen flex flex-col lg:flex-row lg:items-center lg:justify-between px-8 lg:px-16 py-20 gap-12 lg:gap-20"
+        id="section">
 
         <div class="order-2 lg:order-1 flex-1 lg:max-w-lg text-center lg:text-left">
             <div class="order-2 lg:order-1 flex-1 lg:max-w-lg text-center lg:text-left">
@@ -79,68 +93,63 @@
 
             <div class="flex flex-wrap gap-6 justify-center lg:justify-start text-sm font-bold">
 
-        
+
                 <!-- Social Links -->
-<div class="flex justify-center gap-6 mt-10 flex-wrap">
+                <div class="flex justify-center gap-4 mt-10 flex-wrap">
 
-    <!-- Resume -->
-    <a href="./assets/pdf/Myresume.pdf" target="_blank"
-        class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
+                    <!-- Resume -->
+                    <a href="./assets/pdf/Myresume.pdf" target="_blank" class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
                text-2xl text-gray-800 hover:bg-blue-600 hover:text-white
                transition duration-300 shadow-sm">
 
-        <i class="fa-solid fa-file-lines"></i>
-    </a>
+                        <i class="fa-solid fa-file-lines"></i>
+                    </a>
 
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/thilak-t-m-19aa22277" target="_blank"
-        class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/thilak-t-m-19aa22277" target="_blank" class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
                text-2xl text-gray-800 hover:bg-blue-600 hover:text-white
                transition duration-300 shadow-sm">
 
-        <i class="fa-brands fa-linkedin"></i>
-    </a>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
 
-    <!-- GitHub -->
-    <a href="https://github.com/thilak459" target="_blank"
-        class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
+                    <!-- GitHub -->
+                    <a href="https://github.com/thilak459" target="_blank" class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
                text-2xl text-gray-800 hover:bg-blue-600 hover:text-white
                transition duration-300 shadow-sm">
 
-        <i class="fa-brands fa-github"></i>
-    </a>
+                        <i class="fa-brands fa-github"></i>
+                    </a>
 
-    <!-- WhatsApp -->
-    <a href="https://wa.me/919353149804" target="_blank"
-        class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/919353149804" target="_blank" class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
                text-2xl text-gray-800 hover:bg-green-500 hover:text-white
                transition duration-300 shadow-sm">
 
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
 
-    <!-- Email -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=thilakawm123@gmail.com"
-        class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
+                    <!-- Email -->
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=thilakawm123@gmail.com" class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
                text-2xl text-gray-800 hover:bg-red-500 hover:text-white
                transition duration-300 shadow-sm">
 
-        <i class="fa-solid fa-envelope"></i>
-    </a>
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-</div>
+        </div>
         <div class="flex justify-center items-center mt-24">
             <img src="assets/images/photoMy.jpeg"
-            class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-xl">
-            
+                class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-xl">
+
         </div>
-        
+
     </section>
-    
+    <div class="max-w-6xl mx-auto border-t border-gray-200"></div>
     <!-- ABOUT ME -->
     <section id="about" class="py-24 px-8 lg:px-16 bg-white">
         <div class="max-w-5xl mx-auto text-center">
@@ -161,7 +170,7 @@
 
         </div>
     </section>
-    
+
     <div class="max-w-6xl mx-auto border-t border-gray-200"></div>
 
     <!-- PROJECTS -->
@@ -172,36 +181,33 @@
 
             <div class="text-center mb-16">
 
-    <!-- Heading -->
-    <h2
-        class="text-4xl lg:text-5xl font-black mb-6
+                <!-- Heading -->
+                <h2 class="text-4xl lg:text-5xl font-black mb-6
                bg-gradient-to-r from-gray-600 via-white-500 to-cyan-400
                bg-clip-text text-transparent leading-tight">
 
-        My Projects
+                    My Projects
 
-    </h2>
+                </h2>
 
-    <!-- Subtitle -->
-    <p
-        class="text-lg lg:text-xl max-w-3xl mx-auto
+                <!-- Subtitle -->
+                <p class="text-lg lg:text-xl max-w-3xl mx-auto
                text-slate-600 dark:text-slate-400
                leading-relaxed">
 
-        Enterprise-scale full-stack applications crafted with
-        modern frameworks, responsive design systems,
-        scalable architecture, and interactive user experiences.
+                    Enterprise-scale full-stack applications crafted with
+                    modern frameworks, responsive design systems,
+                    scalable architecture, and interactive user experiences.
 
-    </p>
+                </p>
 
-</div>
+            </div>
 
             <!-- Project Search (Feature will attach here) -->
 
             <div class="mb-10 text-center">
 
-                <input id="project-search" type="text" placeholder="Search projects..."
-                    class="w-full pl-14 pr-5 py-4 rounded-2xl
+                <input id="project-search" type="text" placeholder="Search projects..." class="w-full pl-14 pr-5 py-4 rounded-2xl
                    bg-white/80 dark:bg-slate-800/80
                    backdrop-blur-md
                    border border-gray-200 dark:border-slate-700
@@ -270,6 +276,45 @@
         </div>
 
     </section>
+    <!-- Footer -->
+<footer class="bg-gray-900 text-white">
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+        <!-- Top Section -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+
+            <!-- Left -->
+            <div class="text-center md:text-left">
+                <h2 class="text-2xl font-bold">Thilak T M</h2>
+                <p class="text-gray-400 mt-2">
+                    Web Developer • MERN Developer • Tech Enthusiast
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-gray-700 my-8"></div>
+
+        <!-- Bottom -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-sm">
+
+            <p>
+                © 2026 Thilak T M. All rights reserved.
+            </p>
+
+            <div class="flex gap-5">
+                <a href="#" class="hover:text-white transition">GitHub</a>
+                <a href="#" class="hover:text-white transition">LinkedIn</a>
+                <a href="#" class="hover:text-white transition">Email</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
 
     <!-- CONTACT MODAL -->
 
@@ -296,7 +341,7 @@
                 </div>
 
                 <form id="contact-form" class="p-8 space-y-4">
-                    
+
                     <input type="hidden" name="title" value="Portfolio Contact Form">
 
                     <input id="contact-name" name="name" type="text" placeholder="Your name"
@@ -353,6 +398,30 @@
     <script src="js/features/project-sort.js"></script>
     <script src="js/features/dynamic-greeting.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        const navLinks = document.querySelectorAll("#mobile-menu a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            // Hide menu
+            mobileMenu.classList.add("hidden");
+
+            // Reset hamburger icon
+            lines[0].classList.remove("rotate-45", "translate-y-2");
+            lines[1].classList.remove("opacity-0");
+            lines[2].classList.remove("-rotate-45", "-translate-y-2");
+        });
+    });
+
+    </script>
 
 </body>
 
