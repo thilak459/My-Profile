@@ -57,3 +57,24 @@ function initContactValidation(){
         formMessage.textContent = "";
     });
 }
+emailjs.init("gyVdldqpQLh111JOv");
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_xvn5nyi",
+        "template_7yds2oe",
+        this
+    )
+    .then(() => {
+        alert("Message Sent Successfully!");
+        form.reset();
+    })
+    .catch((error) => {
+        console.log(error);
+        alert("Failed to send");
+    });
+});
