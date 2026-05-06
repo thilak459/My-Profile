@@ -54,24 +54,23 @@ function renderProject(dataToRender = projectsData) {
         btnContainer.className = "flex justify-center gap-4 mt-4";
 
         const projectDemo = document.createElement("a");
-        projectDemo.href = project.demo || "#";
-        projectDemo.target = "_blank";
+        projectDemo.href = "#";
         projectDemo.className =
-            "bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm transition";
-        projectDemo.textContent = "Live Demo";
+            "bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 !text-white px-5 py-2 rounded-lg text-sm font-bold shadow-lg transition-all duration-300 hover:scale-105";
+        projectDemo.textContent = "View More";
 
         const projectGit = document.createElement("a");
         projectGit.href = project.github || "#";
         projectGit.target = "_blank";
         projectGit.className =
-            "border bg-blue-300 border-gray-300 hover:bg-gray-100 text-gray-700 px-4 py-2 rounded-md text-sm transition";
+            "bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 !text-white px-5 py-2 rounded-lg text-sm font-bold shadow-lg transition-all duration-300 hover:scale-105";
+        projectDemo.textContent = "View More";
         projectGit.textContent = "GitHub";
 
         btnContainer.appendChild(projectDemo);
         btnContainer.appendChild(projectGit);
 
         // ===== APPEND ELEMENTS =====
-        card.appendChild(likeBtn);
         card.appendChild(projectName);
         card.appendChild(projectCategory);
         card.appendChild(projectTechnologies);
@@ -81,12 +80,17 @@ function renderProject(dataToRender = projectsData) {
         projectContainer.appendChild(card);
 
         // ===== CLICK TO TOGGLE DESCRIPTION =====
-        card.addEventListener("click", function () {
+        projectDemo.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
             if (projectDescription.style.maxHeight) {
                 projectDescription.style.maxHeight = null;
+                projectDemo.textContent = "View More";
             } else {
                 projectDescription.style.maxHeight =
                     projectDescription.scrollHeight + "px";
+                projectDemo.textContent = "View Less";
             }
         });
 
