@@ -22,16 +22,6 @@ const projectsData = [
     github: "#"
   },
   {
-    id: 3,
-    name: "Crime Management System",
-    category: "Web application",
-    description:"Easy to store records of criminal data in the website, to overcome the usage of traditional storing manually. Tracks investigations with features like assignment, progress tracking and evidence management.",
-    technologies: ["SQL", "PHP","CSS", "JavaScript"],
-    status: "Live",
-    liveDemo: "#",
-    github: "#"
-  },
-  {
     id: 4,
     name: "Secured Voting app",
     category: "Android app",
