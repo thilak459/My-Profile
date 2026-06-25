@@ -23,11 +23,11 @@ const projectsData = [
   },
   {
     id: 4,
-    name: "Secured Voting app",
-    category: "Android app",
+    name: "BookMyShow",
+    category: "Web application",
     description:
-      "A secured voting app is a digital platform designed to facilitate safe, transparent, and tamper-proof elections using advanced security measures.",
-    technologies: ["Android", "Java", "SQL"],
+      "Easily we can booking the movie tickets.",
+    technologies: ["MERN Stack"],
     status: "Live",
     liveDemo: "#",
     github: "#"
