@@ -1,428 +1,433 @@
-<!-- MERN_Stu_FebMay26Mys\W4\D5\portfolio-project\index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thilak T M — Full Stack & AI Developer. Portfolio showcasing projects in AI, Machine Learning, and MERN stack development." />
+  <meta name="keywords" content="Thilak T M, Full Stack Developer, AI Developer, MERN Stack, Portfolio, React, Node.js" />
+  <title>Portfolio</title>
 
-    <title>Portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-lg">
 
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  <!-- ═══════════════════ CURSOR GLOW ═══════════════════ -->
+  <div class="cursor-glow" id="cursor-glow"></div>
 
-            <!-- LOGO -->
-            <a href="#" class="text-xl font-bold text-indigo-600 tracking-wide">
-                Home
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Thilak</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <a href="assets/pdf/Myresume.pdf" class="btn-resume" download="Thilak_Resume.pdf">
+          <i class="fas fa-download"></i> Resume
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO SECTION ═══════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span id="time-greeting">Good Morning</span> — Available for work
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text" id="hero-name">Thilak T M</span>
+        </h1>
+
+        <div class="hero-subtitle">
+          <span class="subtitle-prefix">I build </span>
+          <span class="typed-text" id="typed-text"></span>
+          <span class="cursor-blink">|</span>
+        </div>
+
+        <p class="hero-description">
+          Full Stack Developer & AI Enthusiast crafting intelligent, scalable web applications.
+          Passionate about turning complex problems into elegant digital solutions.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">
+            <i class="fas fa-rocket"></i> View Projects
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <i class="fas fa-paper-plane"></i> Let's Talk
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/thilak459" target="_blank" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/thilak-t-m" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:thilakawm123@gmail.com" class="social-icon" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="assets/pdf/Myresume.pdf" target="_blank" class="social-icon" aria-label="Resume">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="avatar-ring">
+          <div class="avatar-container">
+            <img src="assets/images/photoMy.jpeg" alt="Thilak T M" class="avatar-photo" />
+          </div>
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ABOUT SECTION ═══════════════════ -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who I am</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">Passionate about building the future with code</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card glass-card reveal">
+          <div class="about-icon-wrap"><i class="fas fa-user-graduate"></i></div>
+          <h3>Background</h3>
+          <p>B.E. in Artificial Intelligence & Data Science from VTU. Blending theoretical AI knowledge with practical full-stack development skills.</p>
+        </div>
+        <div class="about-card glass-card reveal" style="animation-delay:0.1s">
+          <div class="about-icon-wrap"><i class="fas fa-briefcase"></i></div>
+          <h3>Experience</h3>
+          <p>Interned at Seventh Sense Talent Solutions (Oct–Dec 2024), Bengaluru. Gained hands-on industry experience in real-world software development.</p>
+        </div>
+        <div class="about-card glass-card reveal" style="animation-delay:0.2s">
+          <div class="about-icon-wrap"><i class="fas fa-lightbulb"></i></div>
+          <h3>Passion</h3>
+          <p>Excited by the intersection of AI and web technologies. I love building intelligent applications that solve real-world problems at scale.</p>
+        </div>
+        <div class="about-card glass-card reveal" style="animation-delay:0.3s">
+          <div class="about-icon-wrap"><i class="fas fa-rocket"></i></div>
+          <h3>Goals</h3>
+          <p>Aspiring to become a lead developer specializing in AI-powered applications. Always learning, always building, always growing.</p>
+        </div>
+      </div>
+
+      <div class="stats-row reveal">
+        <div class="stat-item">
+          <span class="stat-number counter" data-target="5">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number counter" data-target="400">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">GitHub commits</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number counter" data-target="10">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number counter" data-target="100">0</span><span class="stat-plus">%</span>
+          <span class="stat-label">Dedication</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SKILLS SECTION ═══════════════════ -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I know</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        <p class="section-subtitle">Technologies I work with daily</p>
+      </div>
+
+      <div class="skills-filter reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Frontend">Frontend</button>
+        <button class="filter-btn" data-filter="Backend">Backend</button>
+        <button class="filter-btn" data-filter="AI-ML">AI / ML</button>
+        <button class="filter-btn" data-filter="Tools">Tools</button>
+      </div>
+
+      <div class="skills-grid" id="skills-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROJECTS SECTION ═══════════════════ -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've built</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">A selection of my recent work</p>
+      </div>
+
+      <div class="projects-toolbar reveal">
+        <div class="search-wrap">
+          <i class="fas fa-search"></i>
+          <input type="text" id="project-search" placeholder="Search projects..." />
+        </div>
+        <div class="project-filters">
+          <button class="filter-btn active" data-pfilter="all">All</button>
+          <button class="filter-btn" data-pfilter="AI-ML">AI-ML</button>
+          <button class="filter-btn" data-pfilter="ML">ML</button>
+          <button class="filter-btn" data-pfilter="Web">Web</button>
+        </div>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ EXPERIENCE SECTION ═══════════════════ -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My journey</span>
+        <h2 class="section-title">Education & <span class="gradient-text">Experience</span></h2>
+        <p class="section-subtitle">Where I've studied and worked</p>
+      </div>
+
+      <div class="timeline" id="timeline">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT SECTION ═══════════════════ -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get in touch</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-subtitle">I'm always open to new opportunities and collaborations</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's work together</h3>
+          <p>Whether you have a project idea, a job opportunity, or just want to say hello — feel free to reach out directly. I'll get back to you as soon as possible!</p>
+
+          <!-- Quick Action Buttons -->
+          <div class="contact-quick-btns">
+            <a href="https://wa.me/919353149804" target="_blank" class="cq-btn cq-whatsapp">
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
             </a>
+            <a href="mailto:thilakawm123@gmail.com" class="cq-btn cq-email">
+              <i class="fas fa-envelope"></i> Send Email
+            </a>
+          </div>
 
-            <!-- MENU -->
-            <ul class="hidden md:flex items-center gap-8 text-gray-700 font-medium">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Education & Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-            </ul>
-            <button id="menu-btn" class="md:hidden text-3xl">
-                ☰
-            </button>
-            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t">
-
-                <div class="flex flex-col items-center py-6 space-y-6 text-gray-700 font-medium">
-
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#experience" class="nav-link">Education & Experience</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-
-                </div>
-            </div>
-            <!-- RIGHT SIDE -->
-            <div class="flex items-center gap-4">
-
-                <!-- THEME BUTTON -->
-                <button id="theme-toggle"
-                    class="px-3 py-1.5 rounded-md bg-gray-100 text-sm font-medium hover:bg-gray-200 transition">
-                    <span id="theme-icon">☀️</span>
-                </button>
-
-            </div>
-
+          <div class="contact-links">
+            <a href="https://wa.me/919353149804" target="_blank" class="contact-link glass-card">
+              <div class="cl-icon cl-icon-whatsapp"><i class="fab fa-whatsapp"></i></div>
+              <div class="cl-text">
+                <span class="cl-label">WhatsApp</span>
+                <span class="cl-value">+91 93531 49804</span>
+              </div>
+              <span class="cl-arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="mailto:thilakawm123@gmail.com" class="contact-link glass-card">
+              <div class="cl-icon cl-icon-email"><i class="fas fa-envelope"></i></div>
+              <div class="cl-text">
+                <span class="cl-label">Email</span>
+                <span class="cl-value">thilakawm123@gmail.com</span>
+              </div>
+              <span class="cl-arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="https://github.com/thilak459" target="_blank" class="contact-link glass-card">
+              <div class="cl-icon cl-icon-github"><i class="fab fa-github"></i></div>
+              <div class="cl-text">
+                <span class="cl-label">GitHub</span>
+                <span class="cl-value">github.com/thilak459</span>
+              </div>
+              <span class="cl-arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+          </div>
         </div>
 
-    </nav><br><br>
+        <div class="contact-form-wrap reveal" style="animation-delay:0.2s">
+          <!-- FormSubmit: sends directly to thilakawm123@gmail.com, no account needed -->
+          <form class="contact-form glass-card" id="contact-form"
+                action="https://formsubmit.co/thilakawm123@gmail.com"
+                method="POST">
 
-    <!-- HERO SECTION -->
+            <!-- FormSubmit config -->
+            <input type="hidden" name="title" value="Portfolio Contact Form">
+            <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="" id="fs-next" />
 
-    <section
-        class="min-h-screen flex flex-col lg:flex-row lg:items-center lg:justify-between px-8 lg:px-16 py-20 gap-12 lg:gap-20"
-        id="section">
-
-        <div class="order-2 lg:order-1 flex-1 lg:max-w-lg text-center lg:text-left">
-            <div class="order-2 lg:order-1 flex-1 lg:max-w-lg text-center lg:text-left">
-                <p id="time-greeting" class="text-gray-500 font-bold tracking-widest uppercase mb-2"></p>
-
-                <h1 class="text-5xl mb-6" id="name">Hi, I'm Thilak T M</h1>
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <div class="input-wrap">
+                <i class="fas fa-user"></i>
+                <input type="text" id="contact-name" name="name" placeholder="Your name" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <div class="input-wrap">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="contact-email" name="email" placeholder="email@website.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message</label>
+              <div class="input-wrap textarea-wrap">
+                <i class="fas fa-message"></i>
+                <textarea id="cf-message" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
             </div>
 
-            <p id="typing-text" class="text-lg lg:text-2xl text-slate-600 font-bold mb-10 max-w-md mx-auto lg:mx-0">
-            </p>
+            <p id="form-message" class="field-error" style="color: #f43f5e; margin-bottom: 12px; font-size: 0.85rem; font-weight: 600; min-height: 0; margin-top: -8px;"></p>
 
-            <div
-                class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center lg:items-start mb-8">
-
-                <a href="#projects" id="proj" class="bg-red-400 hover:bg-green-500 px-10 py-4 rounded shadow-xl">
-                    View Projects
-                </a>
-
-                <a href="assets/pdf/Myresume.pdf" id="resume"
-                    class="bg-blue-400 hover:bg-green-500 px-10 py-4 rounded shadow-xl" download="Myresume.pdf">
-                    Download Resume
-                </a>
-
+            <div class="flex-buttons" style="display: flex; gap: 12px; margin-top: 16px;">
+              <button type="button" id="form-cancel" class="btn-secondary" style="flex: 1; padding: 12px 20px; font-weight: 700; border-radius: 10px; background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.2); color: #f43f5e; transition: all var(--transition);">
+                Cancel
+              </button>
+              <button type="submit" class="btn-primary" id="submit-btn" style="flex: 1; padding: 12px 20px; font-weight: 700; border-radius: 10px; transition: all var(--transition);">
+                Submit
+              </button>
             </div>
 
-            <div class="flex flex-wrap gap-6 justify-center lg:justify-start text-sm font-bold">
-
-
-                <!-- Social Links -->
-                <div class="flex justify-center gap-3 mt-10 flex-wrap">
-
-                    <!-- Resume -->
-                    <a href="./assets/pdf/Myresume.pdf" target="_blank" class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
-               text-2xl text-gray-800 hover:bg-blue-600 hover:text-white
-               transition duration-300 shadow-sm">
-
-                        <i class="fa-solid fa-file-lines"></i>
-                    </a>
-
-                    <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/thilak-t-m-19aa22277" target="_blank" class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
-               text-2xl text-gray-800 hover:bg-blue-600 hover:text-white
-               transition duration-300 shadow-sm">
-
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-
-                    <!-- GitHub -->
-                    <a href="https://github.com/thilak459" target="_blank" class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
-               text-2xl text-gray-800 hover:bg-blue-600 hover:text-white
-               transition duration-300 shadow-sm">
-
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-
-                    <!-- WhatsApp -->
-                    <a href="https://wa.me/919353149804" target="_blank" class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
-               text-2xl text-gray-800 hover:bg-green-500 hover:text-white
-               transition duration-300 shadow-sm">
-
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-
-                    <!-- Email -->
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=thilakawm123@gmail.com" class="w-16 h-16 rounded-full border border-gray-300 flex items-center justify-center
-               text-2xl text-gray-800 hover:bg-red-500 hover:text-white
-               transition duration-300 shadow-sm">
-
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-
-                </div>
-
+            <div class="form-success" id="form-success">
+              <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
             </div>
-
+            <div class="form-error" id="form-error">
+              <i class="fas fa-exclamation-circle"></i> <span id="error-message-text">Failed to send message. Please activate FormSubmit or try emailing directly.</span>
+            </div>
+          </form>
         </div>
-        <div class="flex justify-center items-center mt-24">
-            <img src="assets/images/photoMy.jpeg"
-                class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-xl">
+      </div>
+    </div>
+  </section>
 
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">Thilak</span>
+          <span class="logo-bracket">/&gt;</span>
         </div>
-
-    </section>
-    <div class="max-w-6xl mx-auto border-t border-gray-200"></div>
-    <!-- ABOUT ME -->
-    <section id="about" class="py-24 px-8 lg:px-16 bg-white">
-        <div class="max-w-5xl mx-auto text-center">
-
-            <h2 class="text-4xl lg:text-5xl font-black mb-6
-               bg-gradient-to-r from-gray-600 via-white-500 to-cyan-400
-               bg-clip-text text-transparent leading-tight">
-                About Me
-            </h2>
-
-            <p class="text-lg text-gray-600 leading-relaxed">
-                I am a self-driven web developer fresher with hands-on experience in building modern web applications. I
-                am passionate about creating clean and efficient user interfaces and continuously learning new
-                technologies to enhance my skills.
-                I am eager to begin my professional journey and contribute to impactful projects while growing as a
-                developer.
-            </p>
-
+        <p class="footer-tagline">Full Stack &amp; AI Developer building intelligent, scalable digital experiences.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/thilak459" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/thilak-t-m" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:thilakawm123@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/919353149804" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
-    </section>
+      </div>
 
-    <div class="max-w-6xl mx-auto border-t border-gray-200"></div>
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
 
-    <!-- PROJECTS -->
-
-    <section id="projects" class="py-24 px-8 lg:px-16">
-
-        <div class="max-w-7xl mx-auto">
-
-            <div class="text-center mb-16">
-
-                <!-- Heading -->
-                <h2 class="text-4xl lg:text-5xl font-black mb-6
-               bg-gradient-to-r from-gray-600 via-white-500 to-cyan-400
-               bg-clip-text text-transparent leading-tight">
-
-                    My Projects
-
-                </h2>
-
-                <!-- Subtitle -->
-                <p class="text-lg lg:text-xl max-w-3xl mx-auto
-               text-slate-600 dark:text-slate-400
-               leading-relaxed">
-
-                    Enterprise-scale full-stack applications crafted with
-                    modern frameworks, responsive design systems,
-                    scalable architecture, and interactive user experiences.
-
-                </p>
-
-            </div>
-
-            <!-- Project Search (Feature will attach here) -->
-
-            <div class="mb-10 text-center">
-
-                <input id="project-search" type="text" placeholder="Search projects..." class="w-full pl-14 pr-5 py-4 rounded-2xl
-                   bg-white/80 dark:bg-slate-800/80
-                   backdrop-blur-md
-                   border border-gray-200 dark:border-slate-700
-                   text-gray-800 dark:text-white
-                   placeholder:text-gray-400 dark:placeholder:text-gray-500
-                   shadow-lg shadow-blue-100/40 dark:shadow-black/30
-                   focus:outline-none
-                   focus:ring-2 focus:ring-blue-500
-                   focus:border-blue-500
-                   transition-all duration-300
-                   hover:shadow-xl hover:scale-[1.01]">
-
-            </div>
-
-            <div class="text-center mb-6">
-                <p id="project-count" class="text-lg font-medium text-slate-500"></p>
-            </div>
-
-            <!-- Dynamic container for projects -->
-            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </div>
-
-
-        </div>
-
-    </section>
-    <div class="max-w-6xl mx-auto border-t border-gray-200"></div>
-
-    <!-- EXPERIENCE -->
-
-    <section id="experience" class="py-24 px-8 lg:px-16 bg-gray-50">
-
-        <div class="max-w-4xl mx-auto">
-
-            <h2 class="text-4xl lg:text-5xl font-black mb-6
-               bg-gradient-to-r from-gray-600 via-white-500 to-cyan-400
-               bg-clip-text text-transparent leading-tight text-center">
-                Education and Experience
-            </h2>
-
-            <!-- existing experience cards remain unchanged -->
-            <div id="educationContainer" class="space-y-8"></div>
-
-        </div>
-
-    </section>
-    <div class="max-w-6xl mx-auto border-t border-gray-200"></div>
-    <!-- SKILLS -->
-
-    <section id="skills" class="py-24 px-8 lg:px-16 bg-gray-200">
-
-        <div class="max-w-7xl mx-auto">
-
-            <h2 class="text-4xl lg:text-5xl font-black mb-6
-               bg-gradient-to-r from-gray-600 via-white-500 to-cyan-400
-               bg-clip-text text-transparent leading-tight text-center">
-                Skills
-            </h2>
-
-            <!-- Dynamic Skills Container -->
-            <div id="skills-filters" class="flex gap-4 justify-center mb-6"></div>
-
-            <div id="skills-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            </div>
-
-        </div>
-
-    </section>
-    <!-- Footer -->
-<footer class="bg-gray-900 text-white">
-
-    <div class="max-w-7xl mx-auto px-6 py-12">
-
-        <!-- Top Section -->
-        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-
-            <!-- Left -->
-            <div class="text-center md:text-left">
-                <h2 class="text-2xl font-bold">Thilak T M</h2>
-                <p class="text-gray-400 mt-2">
-                    Web Developer • MERN Developer • Tech Enthusiast
-                </p>
-            </div>
-
-        </div>
-
-        <!-- Divider -->
-        <div class="border-t border-gray-700 my-8"></div>
-
-        <!-- Bottom -->
-        <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-sm">
-
-            <p>
-                © 2026 Thilak T M. All rights reserved.
-            </p>
-
-            <div class="flex gap-5">
-                <a href="https://github.com/thilak459" class="hover:text-white transition">GitHub</a>
-                <a href="https://www.linkedin.com/in/thilak-t-m-19aa22277" class="hover:text-white transition">LinkedIn</a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=thilakawm123@gmail.com" class="hover:text-white transition">Email</a>
-            </div>
-
-        </div>
-
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Get In Touch</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:thilakawm123@gmail.com"><i class="fas fa-envelope"></i> thilakawm123@gmail.com</a></li>
+          <li><a href="https://wa.me/919353149804" target="_blank"><i class="fab fa-whatsapp"></i> +91 93531 49804</a></li>
+          <li><a href="https://github.com/thilak459" target="_blank"><i class="fab fa-github"></i> github.com/thilak459</a></li>
+        </ul>
+      </div>
     </div>
 
-</footer>
-
-    <!-- CONTACT MODAL -->
-
-    <button id="modal-trigger"
-        class="fixed bottom-8 right-8 w-16 h-16 bg-blue-900 text-white rounded-full shadow-2xl flex items-center justify-center text-2xl font-bold">
-        ☏
-    </button>
-
-    <div id="contact-modal" class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-md">
-
-        <div class="flex items-center justify-center min-h-screen p-4">
-
-            <div id="modal-content"
-                class="bg-white w-full max-w-md rounded-2xl shadow-2xl scale-95 opacity-0 transition-all duration-300">
-
-                <div class="sticky top-0 border-b p-8 pt-12 bg-white">
-
-                    <h3 class="text-2xl font-bold">Contact Me</h3>
-
-                    <button id="modal-close" class="absolute top-6 right-6 text-2xl font-bold">
-                        ×
-                    </button>
-
-                </div>
-
-                <form id="contact-form" class="p-8 space-y-4">
-
-                    <input type="hidden" name="title" value="Portfolio Contact Form">
-
-                    <input id="contact-name" name="name" type="text" placeholder="Your name"
-                        class="w-full border rounded px-4 py-3">
-
-                    <input id="contact-email" name="email" type="email" placeholder="email@website.com"
-                        class="w-full border rounded px-4 py-3">
-
-                    <input name="message" placeholder="Message" class="w-full border rounded px-4 py-3">
-
-                    <p id="form-message" class="text-sm text-red-500"></p>
-
-                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
-
-                        <button type="button" id="form-cancel" class="flex-1 font-bold py-4 px-6 rounded-full bg-red-300">
-                            Cancel
-                        </button>
-
-                        <button type="submit" class="flex-1 font-bold py-4 px-6 rounded-full bg-green-300">
-                            Submit
-                        </button>
-
-                    </div>
-
-                </form>
-
-            </div>
-
-        </div>
-
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Thilak T M. All rights reserved.</p>
+      <p class="footer-made">Crafted with <i class="fas fa-heart" style="color:#f43f5e"></i> &amp; <i class="fas fa-coffee" style="color:#a78bfa"></i></p>
     </div>
-    <div id="progressBar"></div>
-    <button id="scroll-to-top"
-        class="fixed bottom-28 right-8 w-12 h-12 bg-black text-white rounded-full shadow-2xl items-center justify-center text-xl font-bold cursor-pointer transition-all duration-300 hover:bg-gray-500 hover:-translate-y-1 hidden z-50">
-        ↑
-    </button>
+  </footer>
 
-    <!-- MAIN JS ENTRY -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="js/data/projects.js"></script>
-    <script src="js/data/skills.js"></script>
-    <script src="js/data/eduction.js"></script>
-    <script src="js/features/skills-render.js"></script>
-    <script src="js/features/modal.js"></script>
-    <script src="js/features/contact-validation.js"></script>
-    <script src="js/features/theme-toggle.js"></script>
-    <script src="js/features/project-filter.js"></script>
-    <script src="js/features/education-render.js"></script>
-    <script src="js/features/new-features.js"></script>
-    <script src="js/features/project-search.js"></script>
-    <script src="js/features/project-render.js"></script>
-    <script src="js/features/typing-animation.js"></script>
-    <script src="js/features/skills-filter.js"></script>
-    <script src="js/features/project-sort.js"></script>
-    <script src="js/features/dynamic-greeting.js"></script>
-    <script src="js/main.js"></script>
+  <!-- ═══════════════════ BACK TO TOP ═══════════════════ -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-    <script>
-        const menuBtn = document.getElementById("menu-btn");
-        const mobileMenu = document.getElementById("mobile-menu");
-
-        menuBtn.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-        });
-
-        const navLinks = document.querySelectorAll("#mobile-menu a");
-
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            // Hide menu
-            mobileMenu.classList.add("hidden");
-
-            // Reset hamburger icon
-            lines[0].classList.remove("rotate-45", "translate-y-2");
-            lines[1].classList.remove("opacity-0");
-            lines[2].classList.remove("-rotate-45", "-translate-y-2");
-        });
-    });
-
-    </script>
-
+  <!-- ═══════════════════ PROJECT MODAL ═══════════════════ -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal glass-card" id="project-modal">
+      <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/data/skills.js"></script>
+  <script src="js/data/projects.js"></script>
+  <script src="js/data/education.js"></script>
+  <script src="js/app.js"></script>
 </body>
-
 </html>

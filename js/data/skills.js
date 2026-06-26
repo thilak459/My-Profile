@@ -1,9 +1,10 @@
-
+/* ═══ SKILLS DATA ═══ */
 const skillsData = [
   {
     id: 1,
     name: "ReactJS",
     image: "assets/images/react.png",
+    icon: "fab fa-react",
     category: "Frontend",
     description: "Advanced Hooks, component-based UI, and state management."
   },
@@ -11,6 +12,7 @@ const skillsData = [
     id: 2,
     name: "Tailwind CSS",
     image: "assets/images/tailwind.png",
+    icon: "fab fa-css3-alt",
     category: "Frontend",
     description: "Responsive layouts, utility-first styling, and clean UI building."
   },
@@ -18,56 +20,67 @@ const skillsData = [
     id: 3,
     name: "JavaScript",
     image: "assets/images/jsLogo.png",
+    icon: "fab fa-js",
     category: "Frontend",
     description: "DOM manipulation, events, validation, Fetch API, and storage."
   },
   {
     id: 4,
-    name: "MongoDB",
-    image: "assets/images/mongoDB.png",
-    category: "Backend",
-    description: "Document-based database design and backend integration."
+    name: "HTML5 / CSS3",
+    icon: "fab fa-html5",
+    category: "Frontend",
+    description: "Semantic HTML, responsive CSS layouts, and modern web standards."
   },
   {
     id: 5,
-    name: "Python",
-    image: "assets/images/python.png",
+    name: "Node.js",
+    image: "assets/images/nodejs.png",
+    icon: "fab fa-node-js",
     category: "Backend",
-    description: "It is a programming language known for its simple syntax and wide use in web development."
+    description: "REST API design, Express.js, middleware, and server-side logic."
   },
   {
     id: 6,
-    name: "SQL",
-    image: "assets/images/sql.png",
+    name: "MongoDB",
+    image: "assets/images/mongodb.png",
+    icon: "fas fa-database",
     category: "Backend",
-    description: "Document-based database design and backend integration."
+    description: "NoSQL schema design, CRUD operations, aggregation pipelines."
   },
   {
     id: 7,
-    name: "HTML",
-    image: "assets/images/htmlLogo.png",
-    category: "Frontend",
-    description: "HTML is the standard language used to create web pages."
+    name: "Express.js",
+    icon: "fas fa-server",
+    category: "Backend",
+    description: "RESTful routing, authentication middleware, and API integration."
   },
   {
     id: 8,
-    name: "CSS",
-    image: "assets/images/cssLogo.png",
-    category: "Frontend",
-    description: "CSS is used to style and design web pages."
+    name: "Python",
+    image: "assets/images/python.png",
+    icon: "fab fa-python",
+    category: "AI-ML",
+    description: "Data processing, scripting, automation, and ML model building."
   },
   {
     id: 9,
-    name: "Java",
-    image: "assets/images/javaLogo.png",
-    category: "Backend",
-    description: "Java is a high-level, object-oriented programming language used to build cross-platform applications."
+    name: "Machine Learning",
+    icon: "fas fa-brain",
+    category: "AI-ML",
+    description: "Supervised/unsupervised learning, model training and evaluation."
   },
   {
     id: 10,
-    name: "C programming",
-    image: "assets/images/cp.png",
-    category: "Backend",
-    description: "C programming is procedure oriented language."
+    name: "Git & GitHub",
+    icon: "fab fa-git-alt",
+    category: "Tools",
+    description: "Version control, branching, pull requests, and collaboration."
+  },
+  {
+    id: 11,
+    name: "VS Code",
+    icon: "fas fa-code",
+    category: "Tools",
+    description: "Extensions, debugging, live server, and integrated terminal."
   }
 ];
