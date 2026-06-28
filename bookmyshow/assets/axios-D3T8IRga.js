@@ -1,0 +1,1 @@
+import{s as e}from"./index-Jx7OQ6an.js";var t=e.create({baseURL:`http://localhost:5000/api`,headers:{"Content-Type":`application/json`}});t.interceptors.request.use(e=>{let t=localStorage.getItem(`token`);return t&&(e.headers.Authorization=`Bearer ${t}`),e},e=>Promise.reject(e));export{t};

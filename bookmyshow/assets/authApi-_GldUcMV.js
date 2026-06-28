@@ -1,0 +1,1 @@
+import{t as e}from"./axios-D3T8IRga.js";var t=async t=>{try{return(await e.post(`/auth/register`,t)).data}catch(e){throw Error(e.response?.data?.message||`Registration failed`)}},n=async t=>{try{return(await e.post(`/auth/login`,t)).data}catch(e){throw Error(e.response?.data?.message||`Login failed`)}};export{t as n,n as t};
