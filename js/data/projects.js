@@ -47,7 +47,7 @@ const projectsData = [
     description: "A fully responsive, feature-rich personal portfolio built with MERN stack principles. Includes dark mode, skill filtering, project search, contact form validation, and typing animations.",
     technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
     status: "Live",
-    liveDemo: "https://github.com/thilak459/My-Profile",
+    liveDemo: "thilaktm.netlify.app",
     github: "https://github.com/thilak459/My-Profile"
   },
   {
@@ -57,7 +57,7 @@ const projectsData = [
     description: "A secured voting app is a digital platform designed to facilitate safe, transparent, and tamper-proof elections using advanced security measures.",
     technologies: ["Android", "Java", "SQL"],
     status: "Live",
-    liveDemo: "lms/",
+    liveDemo: "#",
     github: "#"
   },
 ];
