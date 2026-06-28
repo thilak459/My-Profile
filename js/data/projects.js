@@ -34,11 +34,11 @@ const projectsData = [
     id: 4,
     name: "BookMyShow",
     category: "Web",
-    description: "Easily we can booking the movie tickets.",
-    technologies: ["ReactJS", "Node.js", "MongoDB", "Express.js"],
-    status: "Completed",
-    liveDemo: "#",
-    github: "https://github.com/thilak459"
+    description: "A complete movie ticket booking platform with a mock database running fully inside your browser. Allows searching/viewing movies, selecting showtimes, booking seats with interactive grids, tracking booking history, and managing movies/shows via an Admin Dashboard (Login: admin@bms.com / admin123).",
+    technologies: ["ReactJS", "Node.js", "MongoDB", "Express.js", "Redux"],
+    status: "Live",
+    liveDemo: "bookmyshow/",
+    github: "https://github.com/thilak459/MERN_Stu_FebMay26Mys/tree/main/W12/bookmyshow-frontend"
   },
   {
     id: 5,

@@ -1,0 +1,1 @@
+import{s as e}from"./index-BElMTUmZ.js";async function t(t){return(await e.post(`/bookings`,t)).data}async function n(){return(await e.get(`/bookings/my`)).data}async function r(t){return(await e.patch(`/bookings/${t}/cancel`)).data}export{t as n,n as r,r as t};

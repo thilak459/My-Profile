@@ -6,6 +6,53 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ── Splash / Intro Screen ── */
+  const splash = document.getElementById('splash-screen');
+  const loaderFill = document.getElementById('splash-loader-fill');
+  const loaderText = document.getElementById('splash-loader-text');
+  const splashSkip = document.getElementById('splash-skip');
+
+  const loadingSteps = [
+    { pct: 20, text: 'Loading assets...' },
+    { pct: 45, text: 'Building components...' },
+    { pct: 70, text: 'Rendering portfolio...' },
+    { pct: 90, text: 'Almost ready...' },
+    { pct: 100, text: 'Welcome!' }
+  ];
+
+  // Add splash-active class to prevent scroll
+  document.body.classList.add('splash-active');
+
+  function dismissSplash() {
+    splash.classList.add('fade-out');
+    document.body.classList.remove('splash-active');
+    setTimeout(() => {
+      splash.classList.add('hidden');
+    }, 900);
+  }
+
+  // Animate loader steps
+  let stepIndex = 0;
+  const stepInterval = setInterval(() => {
+    if (stepIndex >= loadingSteps.length) {
+      clearInterval(stepInterval);
+      setTimeout(dismissSplash, 400);
+      return;
+    }
+    const step = loadingSteps[stepIndex];
+    loaderFill.style.width = step.pct + '%';
+    loaderText.textContent = step.text;
+    stepIndex++;
+  }, 600);
+
+  // Skip button
+  splashSkip.addEventListener('click', () => {
+    clearInterval(stepInterval);
+    loaderFill.style.width = '100%';
+    loaderText.textContent = 'Welcome!';
+    setTimeout(dismissSplash, 250);
+  });
+
   /* ── Cursor Glow ── */
   const cursorGlow = document.getElementById('cursor-glow');
   document.addEventListener('mousemove', (e) => {
