@@ -42,12 +42,12 @@ const projectsData = [
   },
   {
     id: 5,
-    name: "LMS",
+    name: "LMS (Learning Management System)",
     category: "Web",
-    description: "LMS(Learning Management System is helpful for enroll the courses and learning that course.",
-    technologies: ["ReactJS", "Node.js", "MongoDB", "Express.js"],
-    status: "Completed",
-    liveDemo: "#",
-    github: "https://github.com/thilak459"
+    description: "A comprehensive Course Enrollment & Learning platform. Students can view available courses, enroll, watch lectures, and track learning progress. Admins/Instructors can create courses, manage lessons, and track user enrollments.",
+    technologies: ["ReactJS", "Node.js", "MongoDB", "Express.js", "Redux"],
+    status: "Live",
+    liveDemo: "lms/",
+    github: "https://github.com/thilak459/MERN_Stu_FebMay26Mys/tree/main/Team%20Project/LMS/lms-frontend"
   }
 ];

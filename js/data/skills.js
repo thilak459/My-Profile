@@ -41,6 +41,14 @@ const skillsData = [
   },
   {
     id: 6,
+    name: "SQL",
+    image: "assets/images/mongodb.png",
+    icon: "fas fa-database",
+    category: "Backend",
+    description: "It is a programming language used to manage, query, and manipulate data stored in relational databases."
+  },
+  {
+    id: 7,
     name: "MongoDB",
     image: "assets/images/mongodb.png",
     icon: "fas fa-database",
@@ -48,14 +56,14 @@ const skillsData = [
     description: "NoSQL schema design, CRUD operations, aggregation pipelines."
   },
   {
-    id: 7,
+    id: 8,
     name: "Express.js",
     icon: "fas fa-server",
     category: "Backend",
     description: "RESTful routing, authentication middleware, and API integration."
   },
   {
-    id: 8,
+    id: 9,
     name: "Python",
     image: "assets/images/python.png",
     icon: "fab fa-python",
@@ -63,21 +71,21 @@ const skillsData = [
     description: "Data processing, scripting, automation, and ML model building."
   },
   {
-    id: 9,
+    id: 10,
     name: "Machine Learning",
     icon: "fas fa-brain",
     category: "AI-ML",
     description: "Supervised/unsupervised learning, model training and evaluation."
   },
   {
-    id: 10,
+    id: 11,
     name: "Git & GitHub",
     icon: "fab fa-git-alt",
     category: "Tools",
     description: "Version control, branching, pull requests, and collaboration."
   },
   {
-    id: 11,
+    id: 12,
     name: "VS Code",
     icon: "fas fa-code",
     category: "Tools",
