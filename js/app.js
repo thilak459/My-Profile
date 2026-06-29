@@ -84,6 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (link.getAttribute('href') === '#' + current) link.classList.add('active');
     });
 
+    // Scroll progress bar
+    const scrollBar = document.getElementById('scroll-bar');
+    if (scrollBar) {
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPct = windowHeight > 0 ? (window.scrollY / windowHeight) * 100 : 0;
+      scrollBar.style.width = scrollPct + '%';
+    }
+
     // Back to top
     const btt = document.getElementById('back-to-top');
     if (window.scrollY > 400) btt.classList.add('visible');
@@ -134,11 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── Typing Animation ── */
   const typedEl = document.getElementById('typed-text');
   const words = [
-    'Full Stack Apps',
-    'AI-Powered Systems',
-    'ML Solutions',
-    'MERN Experiences',
-    'Intelligent Chatbots'
+    'Full Stack Developer',
+    'MERN Stack Developer',
+    'AI & Data Science Graduate'
   ];
   let wIndex = 0, cIndex = 0, deleting = false;
 
@@ -174,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filtered.forEach((skill, i) => {
       const card = document.createElement('div');
       card.className = 'skill-card glass-card reveal';
-      card.style.animationDelay = `${i * 0.06}s`;
+      card.style.animationDelay = `${i * 0.04}s`;
       card.dataset.category = skill.category;
 
       const iconHTML = skill.icon
@@ -184,8 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
       card.innerHTML = `
         <div class="skill-icon-wrap">${iconHTML}</div>
         <div class="skill-name">${skill.name}</div>
-        <span class="skill-cat">${skill.category}</span>
-        <p class="skill-desc">${skill.description}</p>
       `;
       skillsGrid.appendChild(card);
     });
@@ -203,6 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
       renderSkills(btn.dataset.filter);
     });
   });
+
+
 
   /* ── Render Projects ── */
   const projectsGrid = document.getElementById('projects-grid');
@@ -244,23 +250,27 @@ document.addEventListener('DOMContentLoaded', () => {
         'WIP': 'status-wip'
       }[proj.status] || 'status-completed';
 
-      const icon = projectIcons[proj.category] || projectIcons.default;
       const tags = proj.technologies.map(t => `<span class="tag">${t}</span>`).join('');
+      const featuresList = proj.features ? proj.features.map(f => `<li><i class="fas fa-check-circle" style="color:var(--purple-light);margin-right:6px"></i>${f}</li>`).join('') : '';
 
       card.innerHTML = `
-        <div class="project-header">
-          <div class="project-icon"><i class="${icon}"></i></div>
-          <span class="project-status ${statusClass}">${proj.status}</span>
+        <div class="project-img-container">
+          <img src="${proj.image}" alt="${proj.name}" class="project-card-image" />
+          <span class="project-status-badge ${statusClass}">${proj.status}</span>
         </div>
-        <div>
-          <p class="project-category"># ${proj.category}</p>
-          <h3 class="project-title">${proj.name}</h3>
-        </div>
-        <p class="project-description">${proj.description}</p>
-        <div class="project-tags">${tags}</div>
-        <div class="project-links">
-          ${proj.github !== '#' ? `<a href="${proj.github}" target="_blank" class="proj-link" onclick="event.stopPropagation()"><i class="fab fa-github"></i> Code</a>` : ''}
-          ${proj.liveDemo !== '#' ? `<a href="${proj.liveDemo}" target="_blank" class="proj-link" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Demo</a>` : ''}
+        <div class="project-card-body">
+          <span class="project-card-cat"># ${proj.category}</span>
+          <h3 class="project-card-title">${proj.name}</h3>
+          <p class="project-card-desc">${proj.description}</p>
+          <div class="project-card-features">
+            <h4 class="features-title">Key Features:</h4>
+            <ul>${featuresList}</ul>
+          </div>
+          <div class="project-tags">${tags}</div>
+          <div class="project-card-links">
+            ${proj.github !== '#' ? `<a href="${proj.github}" target="_blank" class="btn-secondary proj-btn" onclick="event.stopPropagation()"><i class="fab fa-github"></i> GitHub</a>` : ''}
+            ${proj.liveDemo !== '#' ? `<a href="${proj.liveDemo}" target="_blank" class="btn-primary proj-btn" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}
+          </div>
         </div>
       `;
 
@@ -289,30 +299,29 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProjects(activeFilter, e.target.value);
   });
 
-  /* ── Render Education/Experience Timeline ── */
+  /* ── Render Education Timeline ── */
   const timeline = document.getElementById('timeline');
+  timeline.innerHTML = '';
 
   educationData.forEach((item, i) => {
     const el = document.createElement('div');
-    el.className = 'timeline-item';
+    el.className = 'timeline-node reveal';
     el.style.animationDelay = `${i * 0.15}s`;
 
-    const isOdd = i % 2 === 0;
-    const contentHTML = `
-      <div class="timeline-content glass-card">
-        <p class="tl-type">${item.type} ${item.board ? '· ' + item.board : ''}</p>
-        <h3 class="tl-title">${item.title || item.details}</h3>
-        <p class="tl-location"><i class="fas fa-map-marker-alt"></i> ${item.clgName}</p>
-        ${item.period ? `<p class="tl-location" style="margin-top:4px"><i class="fas fa-calendar-alt"></i> ${item.period}</p>` : ''}
-        ${item.title && item.details !== item.title ? `<p style="color:var(--text-secondary);font-size:0.85rem;margin-top:8px">${item.details}</p>` : ''}
+    el.innerHTML = `
+      <div class="timeline-dot-wrap">
+        <div class="timeline-dot-glow"></div>
+        <div class="timeline-dot"><i class="${item.icon}"></i></div>
+      </div>
+      <div class="timeline-card glass-card">
+        <div class="tl-card-header">
+          <span class="tl-period">${item.period}</span>
+          <h3 class="tl-title">${item.title}</h3>
+        </div>
+        <p class="tl-subject">${item.subject}</p>
+        <p class="tl-institution"><i class="fas fa-university"></i> ${item.institution}</p>
       </div>
     `;
-
-    if (isOdd) {
-      el.innerHTML = `${contentHTML}<div class="timeline-dot"></div><div class="timeline-empty"></div>`;
-    } else {
-      el.innerHTML = `<div class="timeline-empty"></div><div class="timeline-dot"></div>${contentHTML}`;
-    }
 
     timeline.appendChild(el);
   });
@@ -323,26 +332,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalContent = document.getElementById('modal-content');
 
   function openModal(proj) {
-    const icon = projectIcons[proj.category] || projectIcons.default;
-    const tags = proj.technologies.map(t => `<span class="tag">${t}</span>`).join('');
     const statusClass = {
       'Live': 'status-live', 'Completed': 'status-completed', 'WIP': 'status-wip'
     }[proj.status] || 'status-completed';
+    
+    const tags = proj.technologies.map(t => `<span class="tag">${t}</span>`).join('');
+    const featuresList = proj.features ? proj.features.map(f => `<li><i class="fas fa-check-circle" style="color:var(--purple-light);margin-right:8px"></i>${f}</li>`).join('') : '';
 
     modalContent.innerHTML = `
-      <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
-        <div class="project-icon" style="width:60px;height:60px;font-size:1.6rem"><i class="${icon}"></i></div>
-        <div>
-          <span class="project-status ${statusClass}">${proj.status}</span>
-          <p class="project-category" style="margin-top:4px"># ${proj.category}</p>
-        </div>
+      <div class="modal-project-img-wrapper" style="position:relative;width:100%;height:220px;overflow:hidden;border-radius:var(--radius-sm);margin-bottom:20px;">
+        <img src="${proj.image}" alt="${proj.name}" style="width:100%;height:100%;object-fit:cover;" />
+        <span class="project-status-badge ${statusClass}" style="position:absolute;top:16px;right:16px;">${proj.status}</span>
       </div>
-      <h2 class="modal-title">${proj.name}</h2>
-      <p class="modal-description">${proj.description}</p>
-      <div class="modal-tags">${tags}</div>
-      <div class="modal-links">
-        ${proj.github !== '#' ? `<a href="${proj.github}" target="_blank" class="btn-primary" style="padding:10px 20px;font-size:0.85rem"><i class="fab fa-github"></i> View Code</a>` : ''}
-        ${proj.liveDemo !== '#' ? `<a href="${proj.liveDemo}" target="_blank" class="btn-secondary" style="padding:10px 20px;font-size:0.85rem"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}
+      <span class="project-category" style="font-size:0.8rem;color:var(--purple-light);font-family:'JetBrains Mono',monospace;"># ${proj.category}</span>
+      <h2 class="modal-title" style="margin-top:4px;font-size:1.6rem;font-weight:800;color:var(--text-primary);">${proj.name}</h2>
+      <p class="modal-description" style="margin-top:12px;color:var(--text-secondary);font-size:0.95rem;line-height:1.6;">${proj.description}</p>
+      
+      <div class="modal-features-wrap" style="margin-top:20px;">
+        <h4 style="font-size:0.95rem;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Core Features:</h4>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:0.9rem;color:var(--text-secondary);">${featuresList}</ul>
+      </div>
+
+      <div class="modal-tags" style="margin-top:20px;display:flex;flex-wrap:wrap;gap:8px;">${tags}</div>
+      
+      <div class="modal-links" style="margin-top:24px;display:flex;gap:12px;">
+        ${proj.github !== '#' ? `<a href="${proj.github}" target="_blank" class="btn-secondary" style="flex:1;padding:12px;text-align:center;font-size:0.9rem;border-radius:10px;justify-content:center;display:flex;align-items:center;gap:8px;"><i class="fab fa-github"></i> Code Repository</a>` : ''}
+        ${proj.liveDemo !== '#' ? `<a href="${proj.liveDemo}" target="_blank" class="btn-primary" style="flex:1;padding:12px;text-align:center;font-size:0.9rem;border-radius:10px;justify-content:center;display:flex;align-items:center;gap:8px;"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}
       </div>
     `;
     modalOverlay.classList.add('open');
@@ -542,7 +557,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.stats-row').forEach(el => observer.observe(el));
 
     // Timeline items
-    document.querySelectorAll('.timeline-item').forEach((el, i) => {
+    document.querySelectorAll('.timeline-node').forEach((el, i) => {
       setTimeout(() => {
         const tObs = new IntersectionObserver((entries) => {
           entries.forEach(entry => {

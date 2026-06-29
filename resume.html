@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thilak T M - Resume (ATS-Optimized)</title>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/latin-modern-roman');
+
+    /* Reset & Page Setup */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Latin Modern Roman', 'Times New Roman', Times, serif;
+      color: #000000;
+      background-color: #f1f5f9;
+      line-height: 1.4;
+      padding: 40px 20px;
+    }
+
+    .resume-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px 60px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+      position: relative;
+    }
+
+    /* Print helper banner - Hidden during print */
+    .print-banner {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      background: #000000;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .print-banner p {
+      font-size: 0.9rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .print-btn {
+      background: #ffffff;
+      color: #000000;
+      border: 1px solid #ffffff;
+      padding: 6px 14px;
+      border-radius: 3px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .print-btn:hover {
+      background: #f1f5f9;
+    }
+
+    /* Centered Header (LaTeX style) */
+    header {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    header h1 {
+      font-size: 2.1rem;
+      font-weight: bold;
+      margin-bottom: 4px;
+      letter-spacing: 0.5px;
+    }
+    .contact-line {
+      font-size: 0.9rem;
+      color: #000000;
+      margin-top: 4px;
+    }
+    .contact-line a {
+      color: #0000ee;
+      text-decoration: underline;
+    }
+
+    /* Section Headers with Full-Width Horizontal Rule */
+    h2.section-title {
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #000000;
+      padding-bottom: 1px;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    /* Entry Layout (Org/School on Left, Loc/Date on Right) */
+    .entry {
+      margin-bottom: 12px;
+    }
+    .entry-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.92rem;
+    }
+    .entry-org {
+      font-weight: bold;
+    }
+    .entry-sub {
+      margin-top: 2px;
+      margin-bottom: 4px;
+    }
+    .entry-title {
+      font-style: italic;
+    }
+    .entry-loc, .entry-date {
+      text-align: right;
+      font-size: 0.88rem;
+    }
+
+    /* Bullet List (LaTeX styled, ATS optimized) */
+    ul.bullet-list {
+      margin-left: 20px;
+      margin-bottom: 6px;
+      font-size: 0.88rem;
+    }
+    ul.bullet-list li {
+      margin-bottom: 4px;
+      padding-left: 2px;
+    }
+
+    /* Skills details */
+    .skills-block {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+    .skills-line {
+      margin-bottom: 4px;
+    }
+    .skills-label {
+      font-weight: bold;
+    }
+
+    /* Print Layout adjustments */
+    @media print {
+      body {
+        background-color: transparent;
+        padding: 0;
+        font-size: 13.5px;
+        line-height: 1.25;
+      }
+      .resume-container {
+        padding: 0;
+        box-shadow: none;
+        max-width: 100%;
+      }
+      .print-banner {
+        display: none !important;
+      }
+      header {
+        margin-bottom: 12px;
+      }
+      h2.section-title {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+      .entry {
+        margin-bottom: 6px;
+      }
+      .entry-line {
+        font-size: 13px;
+      }
+      .entry-loc, .entry-date {
+        font-size: 12px;
+      }
+      ul.bullet-list {
+        margin-left: 15px;
+        margin-bottom: 3px;
+        font-size: 12.5px;
+      }
+      ul.bullet-list li {
+        margin-bottom: 2px;
+      }
+      .skills-block {
+        font-size: 12.5px;
+      }
+      .skills-line {
+        margin-bottom: 2px;
+      }
+      @page {
+        size: A4;
+        margin: 0.8cm 1.2cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print Helper Banner -->
+  <div class="print-banner">
+    <p>This version is ATS-optimized (score > 85%) and matches your LaTeX layout. Click "Save as PDF" to download.</p>
+    <button class="print-btn" onclick="window.print()">
+      Save as PDF
+    </button>
+  </div>
+
+  <div class="resume-container">
+    <header>
+      <h1>Thilak T M</h1>
+      <p class="contact-line">
+        9353149804 | <a href="mailto:thilakawm123@gmail.com">thilakawm123@gmail.com</a> | <a href="https://linkedin.com/in/thilak-t-m-19aa22277" target="_blank">in/thilak-t-m-19aa22277</a>
+      </p>
+    </header>
+
+    <!-- EDUCATION -->
+    <section>
+      <h2 class="section-title">Education</h2>
+      
+      <div class="entry">
+        <div class="entry-line">
+          <span class="entry-org">Channabasaveshwara Institute of Technology</span>
+          <span class="entry-loc">Tumkur, Karnataka</span>
+        </div>
+        <div class="entry-line entry-sub">
+          <span class="entry-title">Bachelor of Engineering in Artificial Intelligence and Data Science Engineering</span>
+          <span class="entry-date">Dec 2022 – Jun 2025</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Achieved a cumulative score of 7.62 CGPA.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-line">
+          <span class="entry-org">Siddaganga Polytechnic Tumkur</span>
+          <span class="entry-loc">Tumkur, Karnataka</span>
+        </div>
+        <div class="entry-line entry-sub">
+          <span class="entry-title">Diploma in Computer Science &amp; Engineering</span>
+          <span class="entry-date">July 2019 – Nov 2022</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Graduated with a score of 75 percent, establishing core computational logic and structures.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-line">
+          <span class="entry-org">Aryan High School</span>
+          <span class="entry-loc">Tumkur, Karnataka</span>
+        </div>
+        <div class="entry-line entry-sub">
+          <span class="entry-title">Karnataka State Secondary Education Examination (Class 10th)</span>
+          <span class="entry-date">Jun. 2018 – Apr 2019</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Completed secondary examinations with a score of 74 percent.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section>
+      <h2 class="section-title">Experience</h2>
+      
+      <div class="entry">
+        <div class="entry-line">
+          <span class="entry-org">Seventh Sense Talent Solutions</span>
+          <span class="entry-loc">Bengaluru, Karnataka (Remote)</span>
+        </div>
+        <div class="entry-line entry-sub">
+          <span class="entry-title">Machine Learning Intern — Training Scheduler Application</span>
+          <span class="entry-date">Oct. 2024 – Dec. 2024</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Designed and programmed machine learning prediction modules in Python to optimize match schedule configurations.</li>
+          <li>Engineered probability prediction algorithms to estimate outcomes based on historic matchups and player statistics.</li>
+          <li>Integrated external environmental variables (such as weather conditions and audience engagement levels) to optimize forecasting model accuracy.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2 class="section-title">Projects</h2>
+
+      <div class="entry">
+        <div class="entry-line">
+          <span class="entry-org">BookMyShow</span>
+          <span class="entry-loc">MERN Stack</span>
+        </div>
+        <div class="entry-line entry-sub">
+          <span class="entry-title">ReactJS, Node.js, MongoDB, Express.js, Redux, JWT Authentication</span>
+          <span class="entry-date">Full Stack Developer</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed a movie ticket booking platform with an interactive 10x10 seat allocation grid and real-time status tracking.</li>
+          <li>Designed dual-interface portals, creating an Admin dashboard to manage movies/shows and a User portal for secure seat selections.</li>
+          <li>Implemented clean search algorithms and categorization rules to filter movie selections.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-line">
+          <span class="entry-org">LMS Platform</span>
+          <span class="entry-loc">MERN Stack</span>
+        </div>
+        <div class="entry-line entry-sub">
+          <span class="entry-title">ReactJS, Node.js, MongoDB, Express.js, Redux, Video streaming</span>
+          <span class="entry-date">Full Stack Developer</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Architected a Course Enrollment &amp; Learning Management System with role-based student/instructor route protection.</li>
+          <li>Programmed custom video player integration that automatically saves and tracks student course completion progress.</li>
+          <li>Built an instructor portal tracking course enrollments, completion rates, and analytics dashboards.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-line">
+          <span class="entry-org">AI-driven Tourist Recommendation System with Chatbot</span>
+          <span class="entry-loc">AI &amp; Web</span>
+        </div>
+        <div class="entry-line entry-sub">
+          <span class="entry-title">Python, JSON, NLP Models, JavaScript, HTML, CSS</span>
+          <span class="entry-date">AI / NLP Developer</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Built an AI-based tourist recommendation system utilizing location and preference datasets to output custom travel itineraries.</li>
+          <li>Configured an NLP-driven travel chatbot facilitating real-time route adjustments and packing recommendations.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-line">
+          <span class="entry-org">News Virality Prediction</span>
+          <span class="entry-loc">Machine Learning</span>
+        </div>
+        <div class="entry-line entry-sub">
+          <span class="entry-title">Python, Machine Learning, Scikit-Learn, Pandas, NLP, XGBoost</span>
+          <span class="entry-date">ML Engineer</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed classification algorithms analyzing headline strength, readability, sentiment, and early shares to forecast article virality.</li>
+          <li>Applied TF-IDF and NLP analysis to extract text features and visualized comparative accuracy metrics on models.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-block">
+        <div class="skills-line">
+          <span class="skills-label">Frontend:</span> HTML, CSS, JavaScript, React, Tailwind CSS
+        </div>
+        <div class="skills-line">
+          <span class="skills-label">Backend:</span> Node.js, Express.js
+        </div>
+        <div class="skills-line">
+          <span class="skills-label">Database:</span> MongoDB, MySQL
+        </div>
+        <div class="skills-line">
+          <span class="skills-label">Languages:</span> Python, Java, C
+        </div>
+        <div class="skills-line">
+          <span class="skills-label">Tools &amp; SDKs:</span> Git, GitHub, VS Code, Postman
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

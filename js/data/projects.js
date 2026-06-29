@@ -4,7 +4,13 @@ const projectsData = [
     id: 1,
     name: "BookMyShow",
     category: "Web",
-    description: "A complete movie ticket booking platform with a mock database running fully inside your browser. Allows searching/viewing movies, selecting showtimes, booking seats with interactive grids, tracking booking history, and managing movies/shows via an Admin Dashboard (Login: admin@bms.com / admin123).",
+    description: "A complete movie ticket booking platform with an interactive seating selection grid, showtimes selection, and booking history tracking. Built with secure authentication, admin dashboard controls, and real-time statistics.",
+    features: [
+      "Interactive 10x10 seat allocation grid with real-time status tracking.",
+      "Dual interface: Admin dashboard to manage movies/shows, User portal to book tickets.",
+      "Search, filter, and categorization of movies based on genre and language."
+    ],
+    image: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=600&auto=format&fit=crop&q=80",
     technologies: ["ReactJS", "Node.js", "MongoDB", "Express.js", "Redux"],
     status: "Live",
     liveDemo: "bookmyshow/",
@@ -12,9 +18,15 @@ const projectsData = [
   },
   {
     id: 2,
-    name: "LMS (Learning Management System)",
+    name: "LMS Platform",
     category: "Web",
-    description: "A comprehensive Course Enrollment & Learning platform. Students can view available courses, enroll, watch lectures, and track learning progress. Admins/Instructors can create courses, manage lessons, and track user enrollments.",
+    description: "A comprehensive Course Enrollment & Learning Management System. Enables instructors to create and manage courses, publish video lectures, and track students' progress, while students can browse, enroll, and view courses.",
+    features: [
+      "Secure student/instructor authentication and role-based route protection.",
+      "Video lecture player with automatic progress saving and module tracking.",
+      "Instructor dashboard displaying enrollment metrics, course stats, and student completion rates."
+    ],
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80",
     technologies: ["ReactJS", "Node.js", "MongoDB", "Express.js", "Redux"],
     status: "Live",
     liveDemo: "lms/",
@@ -22,42 +34,66 @@ const projectsData = [
   },
   {
     id: 3,
-    name: "AI-Driven Tourist Recommendation System with ChatBot",
-    category: "AI-ML",
-    description: "Built an AI-based tourist recommendation system for personalized travel suggestions. Integrated a chatbot for real-time user interaction and trip planning using NLP techniques.",
-    technologies: ["Python", "JSON", "JavaScript", "HTML/CSS"],
-    status: "Live",
-    liveDemo: "#",
-    github: "#"
-  },
-  {
-    id: 4,
-    name: "News Virality Prediction",
-    category: "ML",
-    description: "Content attributes analysis including headline strength, readability, sentiment, and topic classification. Uses social signals and ML models to predict news virality scores.",
-    technologies: ["Python", "Scikit-learn", "NLP", "Pandas"],
-    status: "Completed",
-    liveDemo: "#",
-    github: "https://github.com/thilak459"
-  },
-  {
-    id: 5,
     name: "Portfolio Website",
     category: "Web",
-    description: "A fully responsive, feature-rich personal portfolio built with MERN stack principles. Includes dark mode, skill filtering, project search, contact form validation, and typing animations.",
-    technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
+    description: "A premium, fully interactive, and responsive developer portfolio featuring modern animations, a dark/light mode toggle, dynamic skill category filtering, and scroll progress tracking.",
+    features: [
+      "Modern dark theme utilizing a rich purple/pink glassmorphism UI.",
+      "Smooth scroll animations, typed hero phrases, and responsive mobile nav drawer.",
+      "Fully validated interactive contact form with active notifications."
+    ],
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=80",
+    technologies: ["HTML5", "CSS3", "JavaScript"],
     status: "Live",
-    liveDemo: "thilaktm.netlify.app",
+    liveDemo: "#",
     github: "https://github.com/thilak459/My-Profile"
   },
   {
-    id: 6,
-    name: "Secured Voting app",
-    category: "Android app",
-    description: "A secured voting app is a digital platform designed to facilitate safe, transparent, and tamper-proof elections using advanced security measures.",
-    technologies: ["Android", "Java", "SQL"],
-    status: "Live",
+    id: 4,
+    name: "AI-driven Tourist Recommendation System with Chatbot",
+    category: "AI-ML",
+    description: "An AI-powered trip planning and tourist recommendation application that generates personalized itineraries based on budget, travel dates, interests, and destination. Integrates an NLP-powered chatbot for real-time recommendations.",
+    features: [
+      "Custom generative itinerary creator tailored to user profiles.",
+      "Interactive travel chatbot assisting with route adjustments and packing lists.",
+      "Map markers plotting and budget analysis breakdowns."
+    ],
+    image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&auto=format&fit=crop&q=80",
+    technologies: ["Python", "JavaScript", "NLP Models", "HTML/CSS"],
+    status: "Completed",
     liveDemo: "#",
     github: "#"
   },
+  {
+    id: 5,
+    name: "Secured Voting App",
+    category: "Web",
+    description: "A blockchain-inspired secure decentralized electronic voting application designed to provide tamper-proof, transparent, and anonymous voting processes. Features voter registration checks and auditable tally logs.",
+    features: [
+      "Encrypted voter credentials using cryptographic hashing algorithms.",
+      "Immutable transaction ledger records representing individual votes securely.",
+      "Real-time auditing dashboard with automated tallies and data visualizations."
+    ],
+    image: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=600&auto=format&fit=crop&q=80",
+    technologies: ["Node.js", "Express.js", "Cryptography", "JavaScript", "HTML/CSS"],
+    status: "Completed",
+    liveDemo: "#",
+    github: "#"
+  },
+  {
+    id: 6,
+    name: "News Virality Prediction",
+    category: "AI-ML",
+    description: "A machine learning application that predicts the virality of online news articles based on features like sentiment, publication hour, publisher profile, and keywords. Uses advanced regression and classification modeling techniques.",
+    features: [
+      "Feature extraction using natural language processing (NLP) on article headlines.",
+      "Automated classification of virality ranges using Random Forest and XGBoost.",
+      "Interactive analytics dashboard visualizing model performance and accuracy metrics."
+    ],
+    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&auto=format&fit=crop&q=80",
+    technologies: ["Python", "Machine Learning", "Scikit-Learn", "Pandas", "Matplotlib"],
+    status: "Completed",
+    liveDemo: "#",
+    github: "#"
+  }
 ];

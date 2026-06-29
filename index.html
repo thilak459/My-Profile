@@ -19,6 +19,11 @@
 </head>
 <body>
 
+  <!-- ═══════════════════ SCROLL PROGRESS BAR ═══════════════════ -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scroll-bar"></div>
+  </div>
+
   <!-- ═══════════════════ SPLASH / INTRO SCREEN ═══════════════════ -->
   <div class="splash-screen" id="splash-screen">
     <div class="splash-bg">
@@ -64,7 +69,8 @@
         <li><a href="#about" class="nav-link" data-section="about">About</a></li>
         <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
         <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#internship" class="nav-link" data-section="internship">Internship</a></li>
         <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
       </ul>
 
@@ -72,8 +78,8 @@
         <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-moon" id="theme-icon"></i>
         </button>
-        <a href="assets/pdf/Myresume.pdf" class="btn-resume" download="Thilak_Resume.pdf">
-          <i class="fas fa-download"></i> Resume
+        <a href="assets/pdf/Myresume.pdf" target="_blank" class="btn-resume" aria-label="View Resume" title="View Resume">
+          <i class="far fa-eye"></i>
         </a>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
           <span></span><span></span><span></span>
@@ -114,11 +120,11 @@
         </p>
 
         <div class="hero-cta">
-          <a href="#projects" class="btn-primary">
-            <i class="fas fa-rocket"></i> View Projects
+          <a href="assets/pdf/Myresume.pdf" class="btn-primary" download="Thilak_Resume.pdf">
+            <i class="fas fa-download"></i> Download Resume
           </a>
-          <a href="#contact" class="btn-secondary">
-            <i class="fas fa-paper-plane"></i> Let's Talk
+          <a href="#projects" class="btn-secondary">
+            <i class="fas fa-rocket"></i> View Projects
           </a>
         </div>
 
@@ -126,7 +132,7 @@
           <a href="https://github.com/thilak459" target="_blank" class="social-icon" aria-label="GitHub">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://www.linkedin.com/in/thilak-t-m" target="_blank" class="social-icon" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/thilak-t-m-19aa22277" target="_blank" class="social-icon" aria-label="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
           </a>
           <a href="mailto:thilakawm123@gmail.com" class="social-icon" aria-label="Email">
@@ -165,29 +171,29 @@
       <div class="section-header">
         <span class="section-tag">Who I am</span>
         <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-        <p class="section-subtitle">Passionate about building the future with code</p>
+        <p class="section-subtitle" style="max-width: 800px; margin: 10px auto 0;">AI & Data Science Graduate | Passionate Full Stack Developer | MERN Stack Learner. Completed a Machine Learning Internship and interested in building scalable web applications.</p>
       </div>
 
       <div class="about-grid">
         <div class="about-card glass-card reveal">
-          <div class="about-icon-wrap"><i class="fas fa-user-graduate"></i></div>
-          <h3>Background</h3>
-          <p>B.E. in Artificial Intelligence & Data Science from VTU. Blending theoretical AI knowledge with practical full-stack development skills.</p>
+          <div class="about-icon-wrap"><i class="fas fa-folder-open"></i></div>
+          <h3>Projects Completed</h3>
+          <p>Built 6+ custom Full Stack and AI/ML applications, featuring interactive seat bookings, course trackers, chatbots, and clean UI components.</p>
         </div>
         <div class="about-card glass-card reveal" style="animation-delay:0.1s">
           <div class="about-icon-wrap"><i class="fas fa-briefcase"></i></div>
-          <h3>Experience</h3>
-          <p>Interned at Seventh Sense Talent Solutions (Oct–Dec 2024), Bengaluru. Gained hands-on industry experience in real-world software development.</p>
+          <h3>Internship</h3>
+          <p>Gained hands-on professional industry experience as a Machine Learning Intern at Seventh Sense Talent Solutions in Bengaluru, India.</p>
         </div>
         <div class="about-card glass-card reveal" style="animation-delay:0.2s">
-          <div class="about-icon-wrap"><i class="fas fa-lightbulb"></i></div>
-          <h3>Passion</h3>
-          <p>Excited by the intersection of AI and web technologies. I love building intelligent applications that solve real-world problems at scale.</p>
+          <div class="about-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+          <h3>Technologies Learned</h3>
+          <p>Skilled in HTML, CSS, JavaScript, Tailwind, Node.js, Express.js, MongoDB, MySQL, Python, Java, C, and developer tools like Postman.</p>
         </div>
         <div class="about-card glass-card reveal" style="animation-delay:0.3s">
-          <div class="about-icon-wrap"><i class="fas fa-rocket"></i></div>
-          <h3>Goals</h3>
-          <p>Aspiring to become a lead developer specializing in AI-powered applications. Always learning, always building, always growing.</p>
+          <div class="about-icon-wrap"><i class="fas fa-handshake"></i></div>
+          <h3>Open to Work</h3>
+          <p>Looking for full-time junior/associate Full Stack Developer roles to contribute to scalable solutions and solve real-world problems.</p>
         </div>
       </div>
 
@@ -223,12 +229,12 @@
         <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
         <p class="section-subtitle">Technologies I work with daily</p>
       </div>
-
       <div class="skills-filter reveal">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="Frontend">Frontend</button>
         <button class="filter-btn" data-filter="Backend">Backend</button>
-        <button class="filter-btn" data-filter="AI-ML">AI / ML</button>
+        <button class="filter-btn" data-filter="Database">Database</button>
+        <button class="filter-btn" data-filter="Languages">Languages</button>
         <button class="filter-btn" data-filter="Tools">Tools</button>
       </div>
 
@@ -266,17 +272,138 @@
     </div>
   </section>
 
-  <!-- ═══════════════════ EXPERIENCE SECTION ═══════════════════ -->
-  <section class="section experience-section" id="experience">
+  <!-- ═══════════════════ EDUCATION SECTION ═══════════════════ -->
+  <section class="section education-section" id="education">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">My journey</span>
-        <h2 class="section-title">Education & <span class="gradient-text">Experience</span></h2>
-        <p class="section-subtitle">Where I've studied and worked</p>
+        <span class="section-tag">Academic Path</span>
+        <h2 class="section-title">Education <span class="gradient-text">Timeline</span></h2>
+        <p class="section-subtitle">A horizontal progression of my academic journey</p>
       </div>
 
-      <div class="timeline" id="timeline">
-        <!-- Rendered by JS -->
+      <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+        <div class="timeline-horizontal" id="timeline">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ INTERNSHIP SECTION ═══════════════════ -->
+  <section class="section internship-section" id="internship">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Professional Experience</span>
+        <h2 class="section-title">Machine Learning <span class="gradient-text">Internship</span></h2>
+        <p class="section-subtitle">Seventh Sense Talent Solutions, Bengaluru</p>
+      </div>
+
+      <div class="internship-content glass-card reveal">
+        <div class="internship-badge-header">
+          <div class="internship-title-wrap">
+            <div class="internship-icon-box"><i class="fas fa-briefcase"></i></div>
+            <div>
+              <h3>Machine Learning Intern</h3>
+              <p class="internship-company">Seventh Sense Talent Solutions</p>
+            </div>
+          </div>
+          <span class="internship-duration">Oct – Dec 2024</span>
+        </div>
+        
+        <div class="internship-details">
+          <div class="internship-col">
+            <h4>Key Responsibilities:</h4>
+            <ul class="internship-resp-list">
+              <li><i class="fas fa-check-circle"></i> Designed, developed, and evaluated Machine Learning algorithms and predictive models using Python.</li>
+              <li><i class="fas fa-check-circle"></i> Preprocessed, cleaned, and analyzed complex structured and unstructured datasets for modeling.</li>
+              <li><i class="fas fa-check-circle"></i> Handled feature engineering, feature selection, and hyperparameters optimization to maximize model accuracy.</li>
+              <li><i class="fas fa-check-circle"></i> Collaborated with engineering teams to integrate models and track performance metrics.</li>
+            </ul>
+          </div>
+          <div class="internship-col">
+            <h4>Technologies Used:</h4>
+            <div class="tech-badge-container">
+              <span class="tag">Python</span>
+              <span class="tag">Scikit-Learn</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Supervised Learning</span>
+              <span class="tag">Model Evaluation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ACHIEVEMENTS SECTION ═══════════════════ -->
+  <section class="section achievements-section" id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Milestones</span>
+        <h2 class="section-title">Key <span class="gradient-text">Achievements</span></h2>
+        <p class="section-subtitle">A collection of milestones representing my technical growth</p>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card glass-card reveal">
+          <div class="ach-icon"><i class="fas fa-folder-open"></i></div>
+          <h3>6+ Projects Completed</h3>
+          <p>Designed and built 6+ Full Stack & AI/ML projects including seat bookings, course platforms, chatbots, and layout grids.</p>
+        </div>
+        <div class="achievement-card glass-card reveal" style="animation-delay: 0.1s;">
+          <div class="ach-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>ML Internship</h3>
+          <p>Completed a professional industry Machine Learning Internship at Seventh Sense Talent Solutions in Bengaluru, India.</p>
+        </div>
+        <div class="achievement-card glass-card reveal" style="animation-delay: 0.2s;">
+          <div class="ach-icon"><i class="fas fa-certificate"></i></div>
+          <h3>MERN Stack Training</h3>
+          <p>Completed intensive training in MERN Stack Development, learning backend API architectures and state management.</p>
+        </div>
+        <div class="achievement-card glass-card reveal" style="animation-delay: 0.3s;">
+          <div class="ach-icon"><i class="fas fa-user-graduate"></i></div>
+          <h3>AI & DS Graduate</h3>
+          <p>Graduated with a Bachelor of Engineering in Artificial Intelligence & Data Science from CIT, Tumakuru (VTU).</p>
+        </div>
+        <div class="achievement-card glass-card reveal" style="animation-delay: 0.4s;">
+          <div class="ach-icon"><i class="fas fa-book-open"></i></div>
+          <h3>Open Source Learning</h3>
+          <p>Actively contributing to local repositories, exploring open-source SDKs, and completing modern web certifications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CERTIFICATIONS SECTION ═══════════════════ -->
+  <section class="section certifications-section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Credentials</span>
+        <h2 class="section-title">Licenses & <span class="gradient-text">Certifications</span></h2>
+        <p class="section-subtitle">Verified professional developer certifications</p>
+      </div>
+
+      <div class="certifications-grid">
+        <div class="certification-card glass-card reveal">
+          <div class="cert-icon-wrap"><i class="fab fa-react"></i></div>
+          <h3>MERN Stack Development</h3>
+          <p class="cert-issuer">MERN Stack Course Academy</p>
+          <span class="cert-badge">Credential ID: CRT-MERN-88</span>
+        </div>
+        <div class="certification-card glass-card reveal" style="animation-delay: 0.1s;">
+          <div class="cert-icon-wrap"><i class="fas fa-brain"></i></div>
+          <h3>Machine Learning Internship</h3>
+          <p class="cert-issuer">Seventh Sense Talent Solutions</p>
+          <span class="cert-badge">Credential ID: ML-INTERN-2024</span>
+        </div>
+        <div class="certification-card glass-card reveal" style="animation-delay: 0.2s;">
+          <div class="cert-icon-wrap"><i class="fab fa-java"></i></div>
+          <h3>Java Full-Stack Certificate</h3>
+          <p class="cert-issuer">Java Course Academy (VTU / CIT)</p>
+          <span class="cert-badge">Credential ID: CRT-JAVA-204</span>
+        </div>
       </div>
     </div>
   </section>
@@ -404,7 +531,7 @@
         <p class="footer-tagline">Full Stack &amp; AI Developer building intelligent, scalable digital experiences.</p>
         <div class="footer-socials">
           <a href="https://github.com/thilak459" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/thilak-t-m" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/thilak-t-m-19aa22277" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a href="mailto:thilakawm123@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           <a href="https://wa.me/919353149804" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
@@ -418,7 +545,8 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#internship">Internship</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -435,8 +563,13 @@
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2025 Thilak T M. All rights reserved.</p>
-      <p class="footer-made">Crafted with <i class="fas fa-heart" style="color:#f43f5e"></i> &amp; <i class="fas fa-coffee" style="color:#a78bfa"></i></p>
+      <p class="footer-copy">&copy; 2026 Thilak T M. All rights reserved.</p>
+      <p class="footer-made">Built with HTML, CSS &amp; JavaScript. Crafted with <i class="fas fa-heart" style="color:#f43f5e"></i> &amp; <i class="fas fa-coffee" style="color:#a78bfa"></i></p>
+      <div class="footer-legal-links" style="margin-top: 10px; display: flex; gap: 16px; justify-content: center; font-size: 0.8rem; color: var(--text-muted);">
+        <a href="#privacy" style="hover: color: var(--purple-light);">Privacy Policy</a>
+        <span>|</span>
+        <a href="#terms" style="hover: color: var(--purple-light);">Terms &amp; Conditions</a>
+      </div>
     </div>
   </footer>
 
