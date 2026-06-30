@@ -13,7 +13,7 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=600&auto=format&fit=crop&q=80",
     technologies: ["ReactJS", "Node.js", "MongoDB", "Express.js", "Redux"],
     status: "Live",
-    liveDemo: "bookmyshow/",
+    liveDemo: "https://bookmyshow-frontend-seven.vercel.app/",
     github: "https://github.com/thilak459/MERN_Stu_FebMay26Mys/tree/main/W12/bookmyshow-frontend"
   },
   {
@@ -62,35 +62,35 @@ const projectsData = [
     technologies: ["Python", "JavaScript", "NLP Models", "HTML/CSS"],
     status: "Completed",
     liveDemo: "#",
-    github: "#"
+    github: "https://github.com/thilak459"
   },
   {
     id: 5,
     name: "Secured Voting App",
     category: "Web",
-    description: "A blockchain-inspired secure decentralized electronic voting application designed to provide tamper-proof, transparent, and anonymous voting processes. Features voter registration checks and auditable tally logs.",
+    description: "A secure digital voting application designed to facilitate safe, transparent, and tamper-proof elections using advanced cryptographic algorithms and voter verification mechanisms.",
     features: [
       "Encrypted voter credentials using cryptographic hashing algorithms.",
       "Immutable transaction ledger records representing individual votes securely.",
       "Real-time auditing dashboard with automated tallies and data visualizations."
     ],
     image: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=600&auto=format&fit=crop&q=80",
-    technologies: ["Node.js", "Express.js", "Cryptography", "JavaScript", "HTML/CSS"],
+    technologies: ["Android", "Java", "SQL"],
     status: "Completed",
     liveDemo: "#",
     github: "#"
   },
   {
     id: 6,
-    name: "News Virality Prediction",
+    name: "ML-based Match Scheduling & Win Probability Prediction",
     category: "AI-ML",
-    description: "A machine learning application that predicts the virality of online news articles based on features like sentiment, publication hour, publisher profile, and keywords. Uses advanced regression and classification modeling techniques.",
+    description: "A machine learning system designed to optimize sports match scheduling constraints and predict team win probabilities using historical data, player profiles, weather statistics, and audience metrics.",
     features: [
-      "Feature extraction using natural language processing (NLP) on article headlines.",
-      "Automated classification of virality ranges using Random Forest and XGBoost.",
-      "Interactive analytics dashboard visualizing model performance and accuracy metrics."
+      "Programmed schedule optimization modules using mathematical constraint matching.",
+      "Engineered win probability prediction engines using historical matchup data and player profiles.",
+      "Integrated live weather features and audience size metrics to maximize prediction model accuracy."
     ],
-    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1607734834519-d8576ae60ea6?w=600&auto=format&fit=crop&q=80",
     technologies: ["Python", "Machine Learning", "Scikit-Learn", "Pandas", "Matplotlib"],
     status: "Completed",
     liveDemo: "#",
