@@ -29,7 +29,7 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80",
     technologies: ["ReactJS", "Node.js", "MongoDB", "Express.js", "Redux"],
     status: "Live",
-    liveDemo: "lms/",
+    liveDemo: "https://lms-frontend-six-tau.vercel.app/",
     github: "https://github.com/thilak459/MERN_Stu_FebMay26Mys/tree/main/Team%20Project/LMS/lms-frontend"
   },
   {

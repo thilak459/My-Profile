@@ -5,7 +5,7 @@ const educationData = [
     title: "Bachelor of Engineering",
     subject: "Artificial Intelligence & Data Science",
     institution: "Channabasaveshwara Institute of Technology (CIT), Tumakuru",
-    period: "2022 – 2025",
+    period: "2022 – 2026",
     icon: "fas fa-graduation-cap"
   },
   {
